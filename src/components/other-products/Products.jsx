@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 const Products = () => {
   return (
     <div className="pt-16">
-      <h2 className="font-bold text-center mb-6 text-4xl">
+      <h2 className="font-bold text-center mb-6 sm:text-4xl text-lg">
         You might also like
       </h2>
 
@@ -19,7 +19,3 @@ const Products = () => {
 };
 
 export default Products;
-
-{
-  /* <div className="max-w-screen-xl mx-auto px-4 py-8"> */
-}

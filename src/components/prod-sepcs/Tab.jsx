@@ -7,10 +7,10 @@ const Tab = () => {
   return (
     <div>
       {/* Tab Navigation */}
-      <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200">
-        <ul className="flex flex-wrap -mb-px gap-6 sm:gap-14">
+      <div className="text-sm font-medium text-center text-gray-500">
+        <ul className="flex -mb-px gap-6 sm:gap-14">
           {tabs.map((tab) => (
-            <li key={tab}>
+            <li key={tab} className="text-nowrap">
               <button
                 onClick={() => setActiveTab(tab)}
                 className={`inline-block sm:p-4 p-[11px] rounded-t-lg ${
