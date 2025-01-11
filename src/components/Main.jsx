@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "./other-products/Products";
 import Tab from "./prod-sepcs/Tab";
-import Newsletter from "./newsletter/Newsletter";
+import Footer from "./footer/Footer";
 
 const Main = () => {
   return (
@@ -16,7 +16,7 @@ const Main = () => {
       <div className="sm:px-8 px-6">
         <Products />
       </div>
-      <Newsletter />
+      <Footer />
     </div>
   );
 };

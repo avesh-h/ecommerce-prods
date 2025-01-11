@@ -8,7 +8,7 @@ const Tab = () => {
     <div>
       {/* Tab Navigation */}
       <div className="text-sm font-medium text-center text-gray-500">
-        <ul className="flex -mb-px gap-6 sm:gap-14">
+        <ul className="flex -mb-px justify-between sm:gap-14 sm:justify-start">
           {tabs.map((tab) => (
             <li key={tab} className="text-nowrap">
               <button
