@@ -3,6 +3,7 @@ import Products from "./other-products/Products";
 import Tab from "./prod-sepcs/Tab";
 import Footer from "./footer/Footer";
 import { Navbar } from "./header/main";
+import ProductDetail from "./product-detail/ProductDetail";
 
 const Main = () => {
   return (
@@ -12,6 +13,7 @@ const Main = () => {
       <div className="flex flex-row justify-center">
         <div className="container flex flex-col gap-x-4 w-10/12">
           {/* This div will have space of 120px from the left and right */}
+          <ProductDetail />
           <Tab />
         </div>
       </div>

@@ -5,7 +5,7 @@ const Tab = () => {
   const [activeTab, setActiveTab] = useState("About");
 
   return (
-    <div>
+    <div className="pt-16">
       {/* Tab Navigation */}
       <div className="text-sm font-medium text-center text-gray-500">
         <ul className="flex -mb-px justify-between sm:gap-14 sm:justify-start">
@@ -28,10 +28,10 @@ const Tab = () => {
       <div className="sm:pt-6 pt-4 text-gray-700">
         <div className="columns-1 md:columns-2 gap-8 sm:text-base text-sm">
           <p className="mb-2 sm:mb-0">{prodSpecContent[activeTab]?.details}</p>
-          <ul className="list-disc pl-6 text-gray-700">
+          <ul className="pl-6 text-gray-700">
             {prodSpecContent[activeTab]?.features?.map((feature, index) => (
               <li key={index} className="mb-2 sm:pt-0.5 pt-2">
-                {feature}
+                • {feature}
               </li>
             ))}
           </ul>
