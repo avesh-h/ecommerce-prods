@@ -32,10 +32,12 @@ export const Links = () => {
           alt="cello-icon"
           className="xs:w-[50px] xs:h-[25px]"
         />
+
         <div className="flex flex-row gap-x-4 px-[5px] py-2 lg:p-0">
           {socialIconsArray?.map((item) => {
             return (
               <img
+                key={item?.alt}
                 src={item?.src}
                 alt={item?.alt}
                 className="h-6 w-6 lg:h-8 lg:w-8"
