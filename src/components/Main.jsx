@@ -13,7 +13,7 @@ const Main = () => {
           <Tab />
         </div>
       </div>
-      <div className="p-8">
+      <div className="sm:px-8 px-6">
         <Products />
       </div>
       <Newsletter />
