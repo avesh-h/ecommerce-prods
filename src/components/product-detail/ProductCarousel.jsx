@@ -1,43 +1,62 @@
-import prodImage from "../../assets/main-prod.png";
+import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
+import prodImage from "../../assets/main-prod-2.png";
 
-export function ProductCarousel() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+function ProductCarousel() {
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
+  let sliderRef1 = useRef(null);
+  let sliderRef2 = useRef(null);
+
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 5000,
+  //   cssEase: "linear",
+  //   nextArrow: ">",
+  //   prevArrow: "<",
+  // };
+
+  useEffect(() => {
+    setNav1(sliderRef1);
+    setNav2(sliderRef2);
+  }, []);
   return (
-    <Slider {...settings}>
-      <div>
-        <img src={prodImage} alt="..." className="h-full w-full object-cover" />
+    <div className="slider-container">
+      <Slider asNavFor={nav2} ref={(slider) => (sliderRef1 = slider)}>
+        <div>
+          <img src={prodImage} alt="product" className="rounded-xl w-full" />
+        </div>
+        <div>
+          <img src={prodImage} alt="product" className="rounded-xl w-full" />
+        </div>
+      </Slider>
+      <div className="pt-6">
+        <Slider
+          asNavFor={nav1}
+          ref={(slider) => (sliderRef2 = slider)}
+          slidesToShow={3}
+          swipeToSlide={true}
+          focusOnSelect={true}
+          className="gap-2"
+        >
+          <div>
+            <img src={prodImage} alt="product" className="rounded-xl" />
+          </div>
+          <div>
+            <img src={prodImage} alt="product" className="rounded-xl" />
+          </div>
+          <div>
+            <img src={prodImage} alt="product" className="rounded-xl" />
+          </div>
+        </Slider>
       </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+    </div>
   );
 }
 
-// {productDetails?.imageSection?.map((image) => (
-//     <img
-//       key={image.id}
-//       src={image.image}
-//       alt="..."
-//       className="h-full w-full object-cover"
-//     />
-//   ))}
+export default ProductCarousel;
