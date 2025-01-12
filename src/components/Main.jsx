@@ -11,9 +11,11 @@ const Main = () => {
       {/* Navbar here that will take the full width of the page */}
       <Navbar />
       <div className="flex flex-row justify-center">
-        <div className="container flex flex-col gap-x-4 w-10/12">
+        <div className="sm:container w-full flex flex-col gap-x-4 sm:w-10/12">
           <ProductDetail />
-          <Tab />
+          <div className="sm:px-0 px-6">
+            <Tab />
+          </div>
         </div>
       </div>
       <div className="sm:px-8 px-6">

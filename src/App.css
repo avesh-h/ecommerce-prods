@@ -34,9 +34,15 @@
 }
 
 .slick-track {
-  /* background-color: red; */
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
+  display: block;
+}
+
+/* skip mobile */
+@media (min-width: 640px) {
+  .slick-track {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
 }

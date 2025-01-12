@@ -6,10 +6,15 @@ import ProductSpecs from "./ProductSpecs";
 const ProductDetail = () => {
   return (
     <>
-      <div className="sm:w-1/2 w-full block sm:hidden">
-        <ProductCarousel />
+      <div className="block sm:hidden">
+        <div className="w-full">
+          <ProductCarousel />
+        </div>
+        <div className="px-6 mt-4">
+          <ProductSpecs />
+        </div>
       </div>
-      <section className="flex flex-col sm:flex-row pt-10 gap-8">
+      <section className="hidden sm:flex flex-col sm:flex-row sm:pt-10 pt-4 gap-8">
         <div className="sm:w-1/2 w-full sm:block hidden">
           <ProductCarousel />
         </div>

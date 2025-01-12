@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import { productCarouselImages } from "../../static/product-details";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-const CustomArrow = ({ direction, onClick }) => {
+const CustomArrow = ({ direction, onClick, className }) => {
   const Icon = direction === "next" ? SlArrowRight : SlArrowLeft;
   return (
     <button
       onClick={onClick}
-      className={`absolute top-1/2 -translate-y-1/2 z-10 bg-transparent rounded-full w-8 h-8 flex items-center justify-center ${
+      className={`absolute top-1/2 -translate-y-1/2 z-10 bg-transparent rounded-full w-8 h-8 sm:flex hidden items-center justify-center ${
         direction === "next" ? "right-4" : "left-4"
       }`}
     >
@@ -70,7 +70,7 @@ function ProductCarousel() {
               <img
                 src={img.image}
                 alt="product"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover sm:rounded-lg rounded-none"
               />
             </div>
           ))}
