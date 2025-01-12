@@ -48,13 +48,13 @@ const ProductSpecs = () => {
         ))}
       </div>
       <div className="gap-1 sm:pt-3 pt-5"></div>
-      <p className="text-[#565656] font-normal sm:text-2xl text-lg">
+      <p className="text-[#565656] font-normal sm:text-2xl text-lg font-aspekta">
         {productsSpecification.title}
       </p>
       {/* pricing */}
       <div className="flex items-center sm:justify-start justify-between pt-2">
         <div className="flex sm:gap-3 gap-2 items-center">
-          <span className="font-bold sm:text-lg text-base">
+          <span className="font-bold sm:text-lg text-base font-eudoxus">
             {productsSpecification?.pricing?.currentPrice}
           </span>
           <span className="line-through text-xs sm:text-base text-black-400 font-thin">

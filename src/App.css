@@ -3,6 +3,69 @@
   pointer-events: none;
 }
 
+@font-face {
+  font-family: Aspekta;
+  src: url(../public/fonts/ttf/Aspekta-100.ttf) format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Aspekta;
+  src: url("../public/fonts/ttf/Aspekta-100.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("../public/fonts/ttf/Aspekta-300.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("../public/fonts/ttf/Aspekta-400.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("../public/fonts/ttf/Aspekta-500.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("../public/fonts/ttf/Aspekta-600.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("../public/fonts/ttf/Aspekta-700.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Eudoxus";
+  src: url("../public/fonts/ttf/EudoxusSans-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Eudoxus";
+  src: url("../public/fonts/ttf/EudoxusSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Eudoxus";
+  src: url("../public/fonts/ttf/EudoxusSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Eudoxus";
+  src: url("../public/fonts/ttf/EudoxusSans-Bold.ttf");
+  font-weight: 600;
+}
+
 /* Common tailwind classes */
 .common-underline {
   @apply leading-[1.61rem] underline underline-offset-4 decoration-solid;
