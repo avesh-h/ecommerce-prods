@@ -6,7 +6,7 @@ import closeIcon from "../../assets/svgs/close-menu-icon.svg";
 import likeIcon from "../../assets/svgs/like-icon.svg";
 import searchIcon from "../../assets/svgs/search-icon.svg";
 import cartIcon from "../../assets/svgs/cart-icon.svg";
-import profileIcon from "../../assets/svgs/profile-icon.svg";
+// import profileIcon from "../../assets/svgs/profile-icon.svg";
 import clsx from "clsx";
 
 export const Navbar = () => {
@@ -151,10 +151,10 @@ const Sidebar = ({ open, setOpen }) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer">
+        {/* <div className="flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer">
           <img src={profileIcon} alt="profile-icon" className="h-6 w-6" />
           <p className="text-base font-normal">Profile</p>
-        </div>
+        </div> */}
       </div>
     </>
   );

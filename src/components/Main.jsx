@@ -12,7 +12,6 @@ const Main = () => {
       <Navbar />
       <div className="flex flex-row justify-center">
         <div className="container flex flex-col gap-x-4 w-10/12">
-          {/* This div will have space of 120px from the left and right */}
           <ProductDetail />
           <Tab />
         </div>

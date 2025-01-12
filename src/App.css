@@ -32,3 +32,11 @@
     transform: rotate(360deg);
   }
 }
+
+.slick-track {
+  /* background-color: red; */
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}

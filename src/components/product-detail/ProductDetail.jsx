@@ -5,14 +5,19 @@ import ProductSpecs from "./ProductSpecs";
 
 const ProductDetail = () => {
   return (
-    <section className="flex flex-col sm:flex-row pt-10 gap-8">
-      <div className="w-1/2">
+    <>
+      <div className="sm:w-1/2 w-full block sm:hidden">
         <ProductCarousel />
       </div>
-      <div>
-        <ProductSpecs />
-      </div>
-    </section>
+      <section className="flex flex-col sm:flex-row pt-10 gap-8">
+        <div className="sm:w-1/2 w-full sm:block hidden">
+          <ProductCarousel />
+        </div>
+        <div>
+          <ProductSpecs />
+        </div>
+      </section>
+    </>
   );
 };
 

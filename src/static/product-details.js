@@ -9,6 +9,18 @@ import minusIcon from "../assets/svgs/Shopicons_Light_Minus.svg";
 import plusIcon from "../assets/svgs/Shopicons_Light_Plus.svg";
 import starIcon from "../assets/svgs/Shopicons_Light_Stars.svg";
 import ratingIcon from "../assets/svgs/Shopicons_Filled_Star.svg";
+import prodImage from "../assets/main-prod-2.png";
+
+export const productCarouselImages = [
+  {
+    id: 1,
+    image: prodImage,
+  },
+  {
+    id: 2,
+    image: prodImage,
+  },
+];
 
 export const productsSpecification = {
   title: "Duro Café Flask, Steel Insulated Coffee Mug, 450ml",
@@ -17,7 +29,6 @@ export const productsSpecification = {
     score: "4.8 (8 reviews)",
     text: "Customisable",
   },
-  customizable: true,
   pricing: {
     currentPrice: "₹902",
     originalPrice: "INR 1999",
