@@ -47,7 +47,7 @@ export const Links = () => {
         </div>
       </div>
       {/* footer links */}
-      <div className="grid grid-cols-2 gap-x-20 gap-y-10 place-items-start lg:flex lg:flex-row lg:grow lg:justify-between">
+      <div className="grid grid-cols-2 gap-x-15 sm:gap-x-20 gap-y-10 place-items-start lg:flex lg:flex-row lg:grow lg:justify-between">
         {footerMenu?.map((menu) => {
           return (
             <div key={menu?.id} className="flex flex-col gap-y-4">
@@ -60,7 +60,7 @@ export const Links = () => {
                     <div className="flex flex-row gap-x-2">
                       <p
                         key={item?.id}
-                        className="font-normal text-xs md:text-base py-1 text-[#565656] sm:text-nowrap text-wrap"
+                        className="font-normal text-xs md:text-base py-1 text-[#565656] text-nowrap"
                       >
                         {item?.text}
                       </p>

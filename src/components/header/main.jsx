@@ -2,9 +2,12 @@ import React, { useLayoutEffect, useState } from "react";
 import celloImg from "../../assets/cello.png";
 import { navbarLinks, navIconsArray } from "../../static/navbar";
 import menuIcon from "../../assets/svgs/menu-icon.svg";
+import closeIcon from "../../assets/svgs/close-menu-icon.svg";
 import likeIcon from "../../assets/svgs/like-icon.svg";
 import searchIcon from "../../assets/svgs/search-icon.svg";
 import cartIcon from "../../assets/svgs/cart-icon.svg";
+import profileIcon from "../../assets/svgs/profile-icon.svg";
+import clsx from "clsx";
 
 export const Navbar = () => {
   const [isMobileScreen, setIsMobileScreen] = useState(
@@ -63,19 +66,73 @@ export const Navbar = () => {
 };
 
 const NavbarMobile = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-[#141313] flex flex-row gap-x-6 px-6 py-1 items-center">
-      <img src={menuIcon} alt="menu-icon" />
-      <img src={likeIcon} alt="like-icon" />
-      <div className="grow mx-auto">
-        <img
-          src={celloImg}
-          alt="cello-img"
-          className="border-0 border-b-4 border-[#DD1E24] pb-2.5"
-        />
+    <>
+      <nav
+        className={clsx(
+          "bg-[#141313] flex flex-row gap-x-6 px-6 pt-1 items-center"
+        )}
+      >
+        <button onClick={() => setOpen((prev) => !prev)}>
+          <img src={menuIcon} alt="menu-icon" />
+        </button>
+        <button>
+          <img src={likeIcon} alt="like-icon" />
+        </button>
+        <div className="grow place-items-center">
+          <img
+            src={celloImg}
+            alt="cello-img"
+            className="border-0 border-b-4 border-[#DD1E24] pb-2.5"
+          />
+        </div>
+        <button>
+          <img src={searchIcon} alt="search-icon" />
+        </button>
+        <button>
+          <img src={cartIcon} alt="cart-icon" />
+        </button>
+      </nav>
+      <Sidebar open={open} setOpen={setOpen} />
+    </>
+  );
+};
+
+const Sidebar = ({ open, setOpen }) => {
+  return (
+    <div
+      className={clsx(
+        "fixed top-0 left-0 z-40 duration-200 bg-[#141313] h-screen text-white flex flex-col justify-between",
+        open ? "w-[40%] py-4 px-2" : "w-0"
+      )}
+    >
+      <div className="grow overflow-y-auto relative">
+        <button
+          onClick={() => setOpen((prev) => !prev)}
+          className="w-full place-items-end"
+        >
+          <img src={closeIcon} alt="close-icon" className="h-6 w-6 mb-3" />
+        </button>
+        <div>
+          <ul>
+            {navbarLinks?.map((link) => {
+              return (
+                <li
+                  key={link?.id}
+                  className="cursor-pointer py-2 px-3 hover:bg-slate-400/50 rounded-md"
+                >
+                  {link?.title}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-      <img src={searchIcon} alt="search-icon" />
-      <img src={cartIcon} alt="cart-icon" />
-    </nav>
+      <div className="flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer">
+        <img src={profileIcon} alt="profile-icon" className="h-6 w-6" />
+        <p className="text-base font-normal">Profile</p>
+      </div>
+    </div>
   );
 };
