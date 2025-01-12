@@ -8,7 +8,6 @@ import ProductDetail from "./product-detail/ProductDetail";
 const Main = () => {
   return (
     <div className="w-full">
-      {/* Navbar here that will take the full width of the page */}
       <Navbar />
       <div className="flex flex-row justify-center">
         <div className="sm:container w-full flex flex-col gap-x-4 sm:w-10/12">

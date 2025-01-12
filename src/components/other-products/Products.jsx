@@ -1,12 +1,16 @@
 import React from "react";
 import { products } from "../../static/other-products";
 import ProductCard from "./ProductCard";
+import backReturn from "../../assets/svgs/back-return.svg";
 
 const Products = () => {
   return (
     <div className="sm:pt-16 pt-0">
       <div className="py-8 sm:hidden flex items-center w-full justify-center gap-1">
-        <button className="text-center underline">Return to catalog</button>
+        <button className="text-center common-underline flex items-center gap-1 text-base">
+          <img src={backReturn} alt="back-return" />
+          Return to catalog
+        </button>
       </div>
       <h2 className="font-bold text-center sm:text-4xl text-lg">
         You might also like
