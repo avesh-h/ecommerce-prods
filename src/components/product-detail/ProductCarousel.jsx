@@ -64,7 +64,7 @@ function ProductCarousel() {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-4">
-        <Slider ref={slider1} {...mainSliderSettings}>
+        <Slider ref={slider1} {...mainSliderSettings} className="z-10">
           {productCarouselImages?.map((img) => (
             <div key={img.id} className="relative aspect-square">
               <img

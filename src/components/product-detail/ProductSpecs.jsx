@@ -157,7 +157,7 @@ const ProductSpecs = () => {
               placeholder="Enter pin code"
               value={pincode}
               onChange={(e) => setPincode(e.target.value)}
-              className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full"
+              className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full focus:outline-none focus:ring-0"
             />
             <img src={checkIcon} alt="checkIcon-icon" />
             <button className="text-gray-600 underline">Check</button>

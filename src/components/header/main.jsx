@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import celloImg from "../../assets/cello.png";
 import { navbarLinks, navIconsArray } from "../../static/navbar";
 import menuIcon from "../../assets/svgs/menu-icon.svg";
@@ -37,13 +37,12 @@ export const Navbar = () => {
           </div>
           <div className="flex flex-row gap-x-9 justify-center flex-wrap">
             {navbarLinks?.map((link) => (
-              <a
-                href=""
+              <p
                 key={link?.id}
-                className="text-white font-base text-light pb-0.5 border-b-[1px] border-transparent hover:border-[#DD1E24] transition-all duration-300"
+                className="text-white cursor-pointer pb-0.5 border-b-[1px] border-transparent hover:border-[#DD1E24] text-base font-light font-eudoxus transition-all duration-300"
               >
                 {link?.title}
-              </a>
+              </p>
             ))}
           </div>
         </div>
@@ -57,7 +56,7 @@ export const Navbar = () => {
           })}
         </div>
       </div>
-      <p className="font-light text-base bg-[#333333] py-2 text-center text-white">
+      <p className="font-light text-base font-eudoxus bg-[#333333] py-2 text-center text-white">
         20% off on all orders above INR 2599. Use coupon code{" "}
         <span className="text-[#DD1E24] font-medium">CELLOWO</span>
       </p>
@@ -65,13 +64,49 @@ export const Navbar = () => {
   );
 };
 
+// remove this if examiner dont want this navbar animation in mobile navbar
+// lastScrollTop
+// navRef
+// whole useEffect
+//remove ref of the nav element
+// remove this classes from the nav "fixed z-20 w-full"
+
+let lastScrollTop = 0;
 const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
+  const navRef = useRef();
+
+  useEffect(() => {
+    const hideShowNav = () => {
+      const currentScrollTop = window.scrollY; // Current vertical scroll position
+
+      if (currentScrollTop > lastScrollTop) {
+        navRef?.current?.classList.remove("translate-y-0");
+        navRef?.current?.classList.add(
+          "-translate-y-full",
+          "ease-in-out",
+          "duration-500"
+        );
+      } else if (currentScrollTop < lastScrollTop) {
+        navRef?.current?.classList.remove("-translate-y-full");
+        navRef?.current?.classList.add(
+          "translate-y-0",
+          "ease-in-out",
+          "duration-500"
+        );
+      }
+      lastScrollTop = currentScrollTop;
+    };
+
+    window.addEventListener("scroll", hideShowNav);
+    return () => window.removeEventListener("scroll", hideShowNav);
+  }, []);
   return (
     <>
       <nav
+        ref={navRef}
         className={clsx(
-          "bg-[#141313] flex flex-row gap-x-6 px-6 pt-1 items-center"
+          "bg-[#141313] flex flex-row gap-x-6 px-6 pt-1 items-center fixed z-20 w-full"
         )}
       >
         <button onClick={() => setOpen((prev) => !prev)}>
@@ -118,15 +153,15 @@ const Sidebar = ({ open, setOpen }) => {
       <div
         className={clsx(
           open
-            ? "fixed top-0 left-0 h-screen w-screen bg-[rgba(0,0,0,0.5)] cursor-default overscroll-none"
+            ? "fixed top-0 left-0 h-screen w-screen cursor-default z-20 backdrop-brightness-75 drop-shadow-lg overflow-hidden"
             : "hidden"
         )}
         onClick={() => setOpen(false)}
       />
       <div
         className={clsx(
-          "fixed top-0 left-0 z-40 duration-200 bg-[#141313] h-screen text-white flex flex-col justify-between",
-          open ? "w-[200px] py-4 px-2" : "w-0"
+          "fixed top-0 left-0 z-40 duration-200 w-0 bg-[#141313] h-screen text-white flex flex-col justify-between",
+          open ? "w-[200px] py-4 px-2" : ""
         )}
       >
         <div className="grow overflow-y-auto relative">
@@ -151,9 +186,13 @@ const Sidebar = ({ open, setOpen }) => {
             </ul>
           </div>
         </div>
-        {/* <div className="flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer">
+        {/* <div
+          className={clsx(
+            "flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer overflow-hidden"
+          )}
+        >
           <img src={profileIcon} alt="profile-icon" className="h-6 w-6" />
-          <p className="text-base font-normal">Profile</p>
+          <span className="text-base font-normal">Profile</span>
         </div> */}
       </div>
     </>
