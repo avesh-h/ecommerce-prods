@@ -1,7 +1,6 @@
 import variantOne from "../assets/b-1.png";
 import variantTwo from "../assets/b-2.png";
 import variantFour from "../assets/b-3.png";
-import variantThree from "../assets/b-4.png";
 import cartIcon from "../assets/svgs/cart-2.svg";
 import arrorRight from "../assets/svgs/Shopicons_Light_ArrowRight.svg";
 import checkIcon from "../assets/svgs/Shopicons_Light_Checkmark.svg";
@@ -48,8 +47,7 @@ export const productsSpecification = {
     {
       id: 3,
       color: "Blue",
-      image: variantThree,
-      isDefault: true,
+      image: variantOne,
     },
     {
       id: 4,
@@ -85,8 +83,8 @@ export const productsSpecification = {
     title: "Return & Shipping",
     pincodeCheckAvailable: true,
     details: [
-      "• Personalised products will take 7-9 days more for delivery",
-      "• Personalised products are not returnable",
+      "Personalised products will take 7-9 days more for delivery",
+      "Personalised products are not returnable",
     ],
   },
   icons: {

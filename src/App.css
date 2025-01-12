@@ -3,6 +3,11 @@
   pointer-events: none;
 }
 
+/* Common tailwind classes */
+.common-underline {
+  @apply leading-[1.61rem] underline underline-offset-4 decoration-solid;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -45,4 +50,24 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+.custom-bullet {
+  list-style: none;
+}
+
+.custom-bullet li {
+  position: relative;
+  padding-left: 1rem;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center-align the bullet */
+}
+
+.custom-bullet li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4b5563;
+  font-size: 0.8rem; /* Adjust bullet size */
 }

@@ -50,10 +50,10 @@ const Tab = () => {
           )}
         >
           <p className="mb-2 sm:mb-0">{prodSpecContent[currentTab]?.details}</p>
-          <ul className="pl-6 text-gray-700">
+          <ul className="list-disc pl-6 text-gray-700">
             {prodSpecContent[activeTab]?.features?.map((feature, index) => (
               <li key={index} className="mb-2 sm:pt-0.5 pt-2">
-                • {feature}
+                {feature}
               </li>
             ))}
           </ul>

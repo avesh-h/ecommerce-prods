@@ -14,37 +14,72 @@ const ProductSpecs = () => {
   return (
     <div>
       {/* ratings */}
-      <div className="sm:flex hidden justify-between text-[#565656]">
-        <p className="flex gap-1">
+      <div className="flex sm:justify-between justify-end text-[#565656]">
+        <p className="sm:flex hidden gap-1 common-underline">
           <img
             src={productsSpecification?.rating?.ratingIcon}
             alt="rating-icon"
           />
           {productsSpecification?.rating?.score}
         </p>
-        <p className="uppercase">{productsSpecification?.rating?.text}</p>
+        <div className="flex justify-between w-full sm:hidden">
+          <p className="text-xs">
+            4 Colors &gt;
+            <span className="font-bold text-palette-black pl-1">Black</span>
+          </p>
+        </div>
+        <p className="uppercase sm:text-base text-xs underline underline-offset-2">
+          {productsSpecification?.rating?.text}
+        </p>
       </div>
+      {/* Product Images */}
+      <div className="sm:hidden flex pt-2">
+        {productsSpecification?.variants?.map((img, index) => (
+          <div
+            key={index}
+            className={`rounded-xl cursor-pointer border-2 border-transparent hover:border-black`}
+          >
+            <img
+              src={img?.image}
+              alt={`Product view ${index + 1}`}
+              className="w-8 h-8 object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="gap-1 sm:pt-3 pt-5"></div>
       <p className="text-[#565656] font-normal sm:text-2xl text-lg">
         {productsSpecification.title}
       </p>
       {/* pricing */}
-      <div className="flex items-center sm:gap-3 gap-2 pt-2">
-        <span className="font-bold sm:text-lg text-base">
-          {productsSpecification?.pricing?.currentPrice}
-        </span>
-        <span className="line-through text-xs sm:text-base text-black-400 font-thin">
-          {productsSpecification?.pricing?.originalPrice}
-        </span>
-        <span className="font-normal text-xs p-0.5 rounded">
-          {productsSpecification?.pricing?.discount}
-        </span>
+      <div className="flex items-center sm:justify-start justify-between pt-2">
+        <div className="flex sm:gap-3 gap-2 items-center">
+          <span className="font-bold sm:text-lg text-base">
+            {productsSpecification?.pricing?.currentPrice}
+          </span>
+          <span className="line-through text-xs sm:text-base text-black-400 font-thin">
+            {productsSpecification?.pricing?.originalPrice}
+          </span>
+          <span className="font-normal sm:text-sm text-xs p-0.5 rounded">
+            {productsSpecification?.pricing?.discount}
+          </span>
+        </div>
+        <div>
+          <p className="sm:hidden flex gap-1 text-sm common-underline">
+            <img
+              src={productsSpecification?.rating?.ratingIcon}
+              alt="rating-icon"
+            />
+            {productsSpecification?.rating?.score}
+          </p>
+        </div>
       </div>
       {/* Product Images */}
       <div className="sm:flex hidden gap-1 pt-10">
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className={`rounded cursor-pointer p-2 hover:border hover:border-gray-300`}
+            className={`rounded-xl cursor-pointer border-2 border-transparent hover:border-black`}
           >
             <img
               src={img?.image}
@@ -89,7 +124,7 @@ const ProductSpecs = () => {
             <img src={productsSpecification?.icons?.plus} alt="plus Icon" />
           </button>
         </div>
-        <button className="text-[#565656] flex items-center gap-1 leading-[1.61rem] underline underline-offset-4 decoration-solid">
+        <button className="text-[#565656] flex items-center gap-1 common-underline">
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
@@ -105,7 +140,7 @@ const ProductSpecs = () => {
         </button>
         <button className="flex-1 py-2 bg-black border-[#565656] text-white rounded flex justify-center items-center gap-1">
           <img src={cartIcon} alt="cart-icon" />
-          <span className="underline">
+          <span className="common-underline">
             {productsSpecification?.actions?.addToCart?.title}
           </span>
         </button>
@@ -131,9 +166,11 @@ const ProductSpecs = () => {
           <p className="font-medium sm:text-xl text-base">
             {productsSpecification?.shipping?.title}
           </p>
-          <ul className="space-y-1 text-base text-gray-600">
+          <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-gray-600">
             {productsSpecification?.shipping?.details?.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="marker:text-gray-600">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
