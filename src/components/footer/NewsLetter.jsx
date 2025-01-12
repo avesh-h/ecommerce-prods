@@ -20,7 +20,7 @@ export const Newsletter = () => {
           Enter email
         </h4>
         <input
-          className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px]"
+          className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] focus:outline-none focus:ring-0"
           type="email"
           placeholder="Enter your email address"
         />
