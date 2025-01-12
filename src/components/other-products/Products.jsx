@@ -9,12 +9,14 @@ const Products = () => {
       <div className="py-8 sm:hidden flex items-center w-full justify-center gap-1">
         <button className="text-center common-underline flex items-center gap-1 text-base">
           <img src={backReturn} alt="back-return" />
-          Return to catalog
+          <span className="text-base font-eudoxus text-palette-black">
+            Return to catalog
+          </span>
         </button>
       </div>
-      <h2 className="font-bold text-center sm:text-4xl text-lg">
+      <h1 className="text-h1 font-eudoxus text-center sm:text-4xl text-lg">
         You might also like
-      </h2>
+      </h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 sm:pt-8 pt-3">
         {products?.map((product) => {

@@ -28,7 +28,18 @@ module.exports = {
         900: "900",
         1000: "1000",
       },
-      fontSize: {},
+      fontSize: {
+        // You can customize your font sizes
+        h1: ["2.25rem", { lineHeight: "3rem", fontWeight: "700" }],
+        h2: ["1.5rem", { lineHeight: "2.5rem", fontWeight: "400" }],
+        h3: ["1.5rem", { lineHeight: "2.25rem", fontWeight: "700" }],
+        h4: ["1.25rem", { lineHeight: "2.25rem", fontWeight: "500" }],
+        body: ["1rem", { lineHeight: "1.5rem", fontWeight: "400" }],
+        p: [
+          "1rem",
+          { lineHeight: "1.5rem", fontWeight: "400", fontFamily: "aspekta" },
+        ],
+      },
       textColor: {
         palette: {
           // font colors

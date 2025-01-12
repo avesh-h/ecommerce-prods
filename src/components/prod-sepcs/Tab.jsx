@@ -24,16 +24,16 @@ const Tab = () => {
   return (
     <div className="sm:pt-16 pt-9">
       {/* Tab Navigation */}
-      <div className="text-sm font-medium text-center text-gray-500">
-        <ul className="flex -mb-px justify-between sm:gap-14 sm:justify-start">
+      <div className="font-eudoxus sm:text-xl text-sm text-center text-palette-gray">
+        <ul className="flex justify-between sm:gap-14 sm:justify-start">
           {tabs.map((tab) => (
             <li key={tab} className="text-nowrap">
               <button
                 onClick={() => handleTabChange(tab)}
-                className={`inline-block sm:p-4 px-2.5 py-1 rounded-t-lg ${
+                className={`inline-block sm:px-0 px-2 py-1 rounded-t-lg ${
                   activeTab === tab
                     ? "text-black border-b-4 border-red-500 font-semibold"
-                    : "text-gray-500 border-b-4 border-transparent hover:text-gray-700 hover:border-gray-300"
+                    : "text-palette-gray font-normal border-b-4 border-transparent hover:text-gray-700 hover:border-gray-300"
                 }`}
               >
                 {tab}
@@ -49,10 +49,15 @@ const Tab = () => {
             isAnimating ? "animate-fadeSlideOut" : "animate-fadeSlideIn"
           )}
         >
-          <p className="mb-2 sm:mb-0">{prodSpecContent[currentTab]?.details}</p>
+          <p className="sm:text-base text-sm font-400 font-aspekta text-palette-gray mb-2 sm:mb-0">
+            {prodSpecContent[currentTab]?.details}
+          </p>
           <ul className="list-disc pl-6 text-gray-700">
             {prodSpecContent[activeTab]?.features?.map((feature, index) => (
-              <li key={index} className="mb-2 sm:pt-0.5 pt-2">
+              <li
+                key={index}
+                className="font-aspekta text-palette-gray mb-2 sm:pt-0.5 pt-2"
+              >
                 {feature}
               </li>
             ))}

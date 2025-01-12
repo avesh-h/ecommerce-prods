@@ -6,17 +6,17 @@ export const Newsletter = () => {
     <div className="flex flex-col xs:w-full gap-y-[30px] md:gap-y-6 md:w-1/2">
       <div className="flex flex-col gap-y-2 md:gap-y-3 text-center">
         {/* Join our Newsletter */}
-        <h3 className="font-bold xs:text-medium md:text-2xl text-palette-black">
+        <h3 className="font-bold xs:text-medium md:text-2xl text-palette-black font-eudoxus">
           Join our Newsletter
         </h3>
-        <p className="text-[#565656] font-light md:text-xl xs:text-sm">
+        <p className="text-palette-gray font-light md:text-xl xs:text-sm font-aspekta">
           Be the first to know about our latest updates, exclusive offers, and
           more.
         </p>
       </div>
       {/* Enter Email */}
       <div className="flex flex-col gap-y-2.5 md:gap-y-3">
-        <h4 className="font-bold text-base md:text-xl text-[#0E0303]">
+        <h4 className="font-bold text-base md:text-xl text-palette-black font-eudoxus">
           Enter email
         </h4>
         <input
@@ -25,7 +25,7 @@ export const Newsletter = () => {
           placeholder="Enter your email address"
         />
         <div className="flex flex-row-reverse gap-x-1 mt-3.5">
-          <p className="font-medium text-lg underline decoration-1">
+          <p className="font-normal sm:text-lg text-base underline decoration-1 underline-offset-4 font-eudoxus">
             Subscribe
           </p>
           <img src={emailSvg} alt="email-svg" />

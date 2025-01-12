@@ -28,7 +28,7 @@ const ProductSpecs = () => {
             <span className="font-bold text-palette-black pl-1">Black</span>
           </p>
         </div>
-        <p className="uppercase sm:text-base text-xs underline underline-offset-2">
+        <p className="uppercase sm:text-base text-xs underline underline-offset-2 font-eudoxus font-normal">
           {productsSpecification?.rating?.text}
         </p>
       </div>
@@ -54,7 +54,7 @@ const ProductSpecs = () => {
       {/* pricing */}
       <div className="flex items-center sm:justify-start justify-between pt-2">
         <div className="flex sm:gap-3 gap-2 items-center">
-          <span className="font-bold sm:text-lg text-base font-eudoxus">
+          <span className="font-bold sm:text-2xl text-base font-eudoxus">
             {productsSpecification?.pricing?.currentPrice}
           </span>
           <span className="line-through text-xs sm:text-base text-black-400 font-thin">
@@ -95,10 +95,10 @@ const ProductSpecs = () => {
           <button
             key={size?.value}
             onClick={() => setSelectedSize(size?.value)}
-            className={`py-1 ${
+            className={`py-1 font-eudoxus ${
               selectedSize === size?.value
-                ? "border-b-4 border-red-500 font-medium"
-                : "text-gray-500"
+                ? "border-b-4 border-red-500 font-bold"
+                : "text-gray-500 font-normal"
             }`}
           >
             {size?.value}
@@ -114,7 +114,7 @@ const ProductSpecs = () => {
           >
             <img src={productsSpecification?.icons?.minus} alt="minus Icon" />
           </button>
-          <p className="font-medium border-b-2 border-red-500 w-6 text-center text-xl">
+          <p className="font-bold font-eudoxus border-b-2 border-red-500 w-6 text-center text-xl">
             {quantity}
           </p>
           <button
@@ -124,7 +124,7 @@ const ProductSpecs = () => {
             <img src={productsSpecification?.icons?.plus} alt="plus Icon" />
           </button>
         </div>
-        <button className="text-[#565656] flex items-center gap-1 common-underline">
+        <button className="text-[#565656] flex items-center gap-1 common-underline font-aspekta">
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
@@ -134,11 +134,11 @@ const ProductSpecs = () => {
       </div>
       {/* Action Buttons */}
       <div className="flex gap-4 pt-8">
-        <button className="flex-1 py-2 border border-[#565656] text-[#565656] rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus flex-1 py-2 border border-[#565656] text-[#565656] rounded flex justify-center items-center gap-1">
           <img src={starIcon} alt="star-icon" />
           {productsSpecification?.actions?.personalise?.title}
         </button>
-        <button className="flex-1 py-2 bg-black border-[#565656] text-white rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus font-500 flex-1 py-2 bg-black border-[#565656] text-white rounded flex justify-center items-center gap-1">
           <img src={cartIcon} alt="cart-icon" />
           <span className="common-underline">
             {productsSpecification?.actions?.addToCart?.title}
@@ -148,7 +148,9 @@ const ProductSpecs = () => {
       {/* Check Availability */}
       <div className="flex flex-col-reverse sm:flex-col">
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium sm:text-xl text-base">Check availability</p>
+          <p className="font-medium sm:text-xl text-base font-eudoxus">
+            Check availability
+          </p>
           <div className="flex gap-2">
             <input
               type="text"
@@ -163,10 +165,10 @@ const ProductSpecs = () => {
         </div>
         {/* Return & Shipping */}
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium sm:text-xl text-base">
+          <p className="font-medium sm:text-xl text-base font-eudoxus">
             {productsSpecification?.shipping?.title}
           </p>
-          <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-gray-600">
+          <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-gray-600 font-aspekta">
             {productsSpecification?.shipping?.details?.map((item, index) => (
               <li key={index} className="marker:text-gray-600">
                 {item}
