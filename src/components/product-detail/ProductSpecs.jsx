@@ -1,40 +1,41 @@
 import React, { useState } from "react";
-import productImg from "../../assets/main-prod.png";
-import plusIcon from "../../assets/svgs/Shopicons_Light_Plus.svg";
-import minusIcon from "../../assets/svgs/Shopicons_Light_Minus.svg";
-import arrorRight from "../../assets/svgs/Shopicons_Light_ArrowRight.svg";
 import cartIcon from "../../assets/svgs/cart-2.svg";
 import starIcon from "../../assets/svgs/Shopicons_Light_Stars.svg";
+import checkIcon from "../../assets/svgs/Shopicons_Light_Checkmark.svg";
+import { productsSpecification } from "../../static/product-details";
 
 const ProductSpecs = () => {
-  const images = [productImg, productImg, productImg, productImg];
-
-  const [selectedSize, setSelectedSize] = useState("450ml");
+  const [selectedSize, setSelectedSize] = useState(
+    productsSpecification.sizes?.[0]?.value
+  );
   const [quantity, setQuantity] = useState(1);
-  const sizes = ["450ml", "750ml"];
   const [pincode, setPincode] = useState("");
 
   return (
     <div>
       <p className="text-gray-700 font-normal text-2xl">
-        Duro Café Flask, Steel Insulated Coffee Mug, 450ml
+        {productsSpecification.title}
       </p>
       <div className="flex items-center gap-3 pt-2">
-        <span className="font-bold sm:text-lg text-base">$902</span>
-        <span className="line-through text-xs sm:text-base text-black-400 font-thin">
-          {`INR 1,999`}
+        <span className="font-bold sm:text-lg text-base">
+          {productsSpecification?.pricing?.currentPrice}
         </span>
-        <span className="font-normal text-xs p-0.5 rounded">50% off</span>
+        <span className="line-through text-xs sm:text-base text-black-400 font-thin">
+          {productsSpecification?.pricing?.originalPrice}
+        </span>
+        <span className="font-normal text-xs p-0.5 rounded">
+          {productsSpecification?.pricing?.discount}
+        </span>
       </div>
       {/* Product Images */}
       <div className="flex gap-1 pt-10">
-        {images.map((img, index) => (
+        {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className={`rounded cursor-pointer p-2 hover:border hover:border-gray-300   `}
+            className={`rounded cursor-pointer p-2 hover:border hover:border-gray-300`}
           >
             <img
-              src={img}
+              src={img?.image}
               alt={`Product view ${index + 1}`}
               className="w-16 h-16 object-cover"
             />
@@ -42,43 +43,46 @@ const ProductSpecs = () => {
         ))}
       </div>
       {/* Size Selection */}
-      <div className="flex gap-4 sm:pt-10 pt-5">
-        {sizes.map((size) => (
+      <div className="flex gap-8 sm:pt-10 pt-5">
+        {productsSpecification?.sizes?.map((size) => (
           <button
-            key={size}
-            onClick={() => setSelectedSize(size)}
-            className={`py-1 px-4 ${
-              selectedSize === size
+            key={size?.value}
+            onClick={() => setSelectedSize(size?.value)}
+            className={`py-1 ${
+              selectedSize === size?.value
                 ? "border-b-4 border-red-500 font-medium"
                 : "text-gray-500"
             }`}
           >
-            {size}
+            {size?.value}
           </button>
         ))}
       </div>
       {/* Quantity and Actions */}
       <div className="flex items-center justify-between sm:pt-10 pt-5">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1">
           <button
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            className="p-2 border-none rounded"
+            className="border-none rounded"
           >
-            <img src={minusIcon} alt="minus Icon" />
+            <img src={productsSpecification?.icons?.minus} alt="minus Icon" />
           </button>
-          <p className="font-medium border-b-2 border-red-500 w-6 text-center">
+          <p className="font-medium border-b-2 border-red-500 w-6 text-center text-xl">
             {quantity}
           </p>
           <button
             onClick={() => setQuantity(quantity + 1)}
-            className="p-2 border-none rounded"
+            className="border-none rounded"
           >
-            <img src={plusIcon} alt="plus Icon" />
+            <img src={productsSpecification?.icons?.plus} alt="plus Icon" />
           </button>
         </div>
-        <button className="text-gray-600 flex items-center gap-1 underline">
+        <button className="text-[#565656] flex items-center gap-1 leading-[1.61rem] underline underline-offset-4 decoration-solid">
           Bulk Order
-          <img src={arrorRight} alt="order-icon" />
+          <img
+            src={productsSpecification?.icons?.arrowRight}
+            alt="order-icon"
+          />
         </button>
       </div>
       {/* Action Buttons */}
@@ -105,17 +109,19 @@ const ProductSpecs = () => {
               onChange={(e) => setPincode(e.target.value)}
               className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full"
             />
+            <img src={checkIcon} alt="checkIcon-icon" />
             <button className="text-gray-600 underline">Check</button>
           </div>
         </div>
         {/* Return & Shipping */}
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium">Return & Shipping</p>
+          <p className="font-medium">
+            {productsSpecification?.shipping?.title}
+          </p>
           <ul className="space-y-1 text-base text-gray-600">
-            <li>
-              • Personalised products will take 7-9 days more for delivery
-            </li>
-            <li>• Personalised products are not returnable</li>
+            {productsSpecification?.shipping?.details?.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
         </div>
       </div>
