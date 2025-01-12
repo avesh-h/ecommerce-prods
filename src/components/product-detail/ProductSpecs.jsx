@@ -65,7 +65,7 @@ const ProductSpecs = () => {
           </span>
         </div>
         <div>
-          <p className="sm:hidden flex gap-1 text-sm common-underline">
+          <p className="sm:hidden flex gap-1 text-sm common-underline font-aspekta text-palette-gray">
             <img
               src={productsSpecification?.rating?.ratingIcon}
               alt="rating-icon"
@@ -124,7 +124,7 @@ const ProductSpecs = () => {
             <img src={productsSpecification?.icons?.plus} alt="plus Icon" />
           </button>
         </div>
-        <button className="text-[#565656] flex items-center gap-1 common-underline font-aspekta">
+        <button className="text-[#565656] flex text-base items-center gap-1 common-underline font-aspekta">
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
@@ -134,7 +134,7 @@ const ProductSpecs = () => {
       </div>
       {/* Action Buttons */}
       <div className="flex gap-4 pt-8">
-        <button className="font-eudoxus flex-1 py-2 border border-[#565656] text-[#565656] rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus font-500 flex-1 py-2 border border-[#565656] text-[#565656] rounded flex justify-center items-center gap-1">
           <img src={starIcon} alt="star-icon" />
           {productsSpecification?.actions?.personalise?.title}
         </button>
