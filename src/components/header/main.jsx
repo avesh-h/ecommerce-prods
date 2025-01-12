@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import celloImg from "../../assets/cello.png";
 import { navbarLinks, navIconsArray } from "../../static/navbar";
 import menuIcon from "../../assets/svgs/menu-icon.svg";
@@ -100,39 +100,62 @@ const NavbarMobile = () => {
 };
 
 const Sidebar = ({ open, setOpen }) => {
+  //Hooks
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [open]);
+
   return (
-    <div
-      className={clsx(
-        "fixed top-0 left-0 z-40 duration-200 bg-[#141313] h-screen text-white flex flex-col justify-between",
-        open ? "w-[40%] py-4 px-2" : "w-0"
-      )}
-    >
-      <div className="grow overflow-y-auto relative">
-        <button
-          onClick={() => setOpen((prev) => !prev)}
-          className="w-full place-items-end"
-        >
-          <img src={closeIcon} alt="close-icon" className="h-6 w-6 mb-3" />
-        </button>
-        <div>
-          <ul>
-            {navbarLinks?.map((link) => {
-              return (
-                <li
-                  key={link?.id}
-                  className="cursor-pointer py-2 px-3 hover:bg-slate-400/50 rounded-md"
-                >
-                  {link?.title}
-                </li>
-              );
-            })}
-          </ul>
+    <>
+      <div
+        className={clsx(
+          open
+            ? "fixed top-0 left-0 h-screen w-screen bg-[rgba(0,0,0,0.5)] cursor-default overscroll-none"
+            : "hidden"
+        )}
+        onClick={() => setOpen(false)}
+      />
+      <div
+        className={clsx(
+          "fixed top-0 left-0 z-40 duration-200 bg-[#141313] h-screen text-white flex flex-col justify-between",
+          open ? "w-[200px] py-4 px-2" : "w-0"
+        )}
+      >
+        <div className="grow overflow-y-auto relative">
+          <button
+            onClick={() => setOpen((prev) => !prev)}
+            className="w-full place-items-end"
+          >
+            <img src={closeIcon} alt="close-icon" className="h-6 w-6 mb-3" />
+          </button>
+          <div>
+            <ul>
+              {navbarLinks?.map((link) => {
+                return (
+                  <li
+                    key={link?.id}
+                    className="cursor-pointer py-2 px-3 hover:bg-slate-400/50 rounded-md"
+                  >
+                    {link?.title}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer">
+          <img src={profileIcon} alt="profile-icon" className="h-6 w-6" />
+          <p className="text-base font-normal">Profile</p>
         </div>
       </div>
-      <div className="flex flex-row gap-x-3 items-center hover:bg-slate-400/50 rounded-md py-2 px-3 cursor-pointer">
-        <img src={profileIcon} alt="profile-icon" className="h-6 w-6" />
-        <p className="text-base font-normal">Profile</p>
-      </div>
-    </div>
+    </>
   );
 };
