@@ -40,7 +40,7 @@ export const Navbar = () => {
               <a
                 href=""
                 key={link?.id}
-                className="text-white font-base text-light"
+                className="text-white font-base text-light pb-0.5 border-b-[1px] border-transparent hover:border-[#DD1E24] transition-all duration-300"
               >
                 {link?.title}
               </a>

@@ -36,6 +36,20 @@ module.exports = {
           gray: "#333333",
         },
       },
+      keyframes: {
+        fadeSlideIn: {
+          "0%": { opacity: 0, transform: "translateY(10px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        fadeSlideOut: {
+          "0%": { opacity: 1, transform: "translateY(0)" },
+          "100%": { opacity: 0, transform: "translateY(10px)" },
+        },
+      },
+      animation: {
+        fadeSlideIn: "fadeSlideIn 0.3s ease-out",
+        fadeSlideOut: "fadeSlideOut 0.3s ease-out",
+      },
     },
   },
   plugins: [flowbite.plugin()],
