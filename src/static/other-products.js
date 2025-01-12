@@ -49,5 +49,4 @@ export const products = [
     customizable: true,
     groupProds: [prodOne, prodTwo, prodThree, prodFour],
   },
-  // Add more products here...
 ];

@@ -6,7 +6,7 @@ export const Newsletter = () => {
     <div className="flex flex-col xs:w-full gap-y-[30px] md:gap-y-6 md:w-1/2">
       <div className="flex flex-col gap-y-2 md:gap-y-3 text-center">
         {/* Join our Newsletter */}
-        <h3 className="font-bold xs:text-medium md:text-2xl text-[#0E0303]">
+        <h3 className="font-bold xs:text-medium md:text-2xl text-palette-black">
           Join our Newsletter
         </h3>
         <p className="text-[#565656] font-light md:text-xl xs:text-sm">
@@ -20,7 +20,7 @@ export const Newsletter = () => {
           Enter email
         </h4>
         <input
-          className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px]"
+          className="border-0 border-b-2 border-palette-gray bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px]"
           type="email"
           placeholder="Enter your email address"
         />

@@ -5,7 +5,7 @@ const Tab = () => {
   const [activeTab, setActiveTab] = useState("About");
 
   return (
-    <div className="pt-16">
+    <div className="sm:pt-16 pt-9">
       {/* Tab Navigation */}
       <div className="text-sm font-medium text-center text-gray-500">
         <ul className="flex -mb-px justify-between sm:gap-14 sm:justify-start">

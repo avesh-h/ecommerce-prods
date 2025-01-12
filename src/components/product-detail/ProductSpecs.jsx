@@ -13,10 +13,22 @@ const ProductSpecs = () => {
 
   return (
     <div>
-      <p className="text-gray-700 font-normal text-2xl">
+      {/* ratings */}
+      <div className="sm:flex hidden justify-between text-[#565656]">
+        <p className="flex gap-1">
+          <img
+            src={productsSpecification?.rating?.ratingIcon}
+            alt="rating-icon"
+          />
+          {productsSpecification?.rating?.score}
+        </p>
+        <p className="uppercase">{productsSpecification?.rating?.text}</p>
+      </div>
+      <p className="text-[#565656] font-normal sm:text-2xl text-lg">
         {productsSpecification.title}
       </p>
-      <div className="flex items-center gap-3 pt-2">
+      {/* pricing */}
+      <div className="flex items-center sm:gap-3 gap-2 pt-2">
         <span className="font-bold sm:text-lg text-base">
           {productsSpecification?.pricing?.currentPrice}
         </span>
@@ -28,7 +40,7 @@ const ProductSpecs = () => {
         </span>
       </div>
       {/* Product Images */}
-      <div className="flex gap-1 pt-10">
+      <div className="sm:flex hidden gap-1 pt-10">
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
@@ -43,7 +55,7 @@ const ProductSpecs = () => {
         ))}
       </div>
       {/* Size Selection */}
-      <div className="flex gap-8 sm:pt-10 pt-5">
+      <div className="flex sm:gap-8 gap-6 sm:pt-10 pt-5">
         {productsSpecification?.sizes?.map((size) => (
           <button
             key={size?.value}
@@ -89,18 +101,19 @@ const ProductSpecs = () => {
       <div className="flex gap-4 pt-8">
         <button className="flex-1 py-2 border border-[#565656] text-[#565656] rounded flex justify-center items-center gap-1">
           <img src={starIcon} alt="star-icon" />
-          Personalise
+          {productsSpecification?.actions?.personalise?.title}
         </button>
         <button className="flex-1 py-2 bg-black border-[#565656] text-white rounded flex justify-center items-center gap-1">
           <img src={cartIcon} alt="cart-icon" />
-          <span className="underline">Add to Cart</span>
+          <span className="underline">
+            {productsSpecification?.actions?.addToCart?.title}
+          </span>
         </button>
       </div>
-
+      {/* Check Availability */}
       <div className="flex flex-col-reverse sm:flex-col">
-        {/* Check Availability */}
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium">Check availability</p>
+          <p className="font-medium sm:text-xl text-base">Check availability</p>
           <div className="flex gap-2">
             <input
               type="text"
@@ -115,7 +128,7 @@ const ProductSpecs = () => {
         </div>
         {/* Return & Shipping */}
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium">
+          <p className="font-medium sm:text-xl text-base">
             {productsSpecification?.shipping?.title}
           </p>
           <ul className="space-y-1 text-base text-gray-600">

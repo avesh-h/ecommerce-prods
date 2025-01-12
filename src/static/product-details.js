@@ -1,40 +1,21 @@
-import productImage from "../assets/main-prod.png";
-import productImage2 from "../assets/prod-img.png";
 import variantOne from "../assets/b-1.png";
 import variantTwo from "../assets/b-2.png";
-import variantThree from "../assets/b-4.png";
 import variantFour from "../assets/b-3.png";
-import plusIcon from "../assets/svgs/Shopicons_Light_Plus.svg";
-import minusIcon from "../assets/svgs/Shopicons_Light_Minus.svg";
-import arrorRight from "../assets/svgs/Shopicons_Light_ArrowRight.svg";
+import variantThree from "../assets/b-4.png";
 import cartIcon from "../assets/svgs/cart-2.svg";
-import starIcon from "../assets/svgs/Shopicons_Light_Stars.svg";
+import arrorRight from "../assets/svgs/Shopicons_Light_ArrowRight.svg";
 import checkIcon from "../assets/svgs/Shopicons_Light_Checkmark.svg";
-
-export const productDetails = {
-  imageSection: [
-    {
-      id: 1,
-      image: productImage,
-    },
-    {
-      id: 2,
-      image: productImage2,
-    },
-    {
-      id: 3,
-      image: productImage,
-    },
-  ],
-};
+import minusIcon from "../assets/svgs/Shopicons_Light_Minus.svg";
+import plusIcon from "../assets/svgs/Shopicons_Light_Plus.svg";
+import starIcon from "../assets/svgs/Shopicons_Light_Stars.svg";
+import ratingIcon from "../assets/svgs/Shopicons_Filled_Star.svg";
 
 export const productsSpecification = {
-  id: "duro-cafe-flask-450ml",
   title: "Duro Café Flask, Steel Insulated Coffee Mug, 450ml",
   rating: {
-    score: 4.8,
-    reviewCount: 8,
-    reviewLink: "#",
+    ratingIcon: ratingIcon,
+    score: "4.8 (8 reviews)",
+    text: "Customisable",
   },
   customizable: true,
   pricing: {
@@ -47,26 +28,22 @@ export const productsSpecification = {
       id: 1,
       color: "Grey",
       image: variantOne,
-      available: true,
     },
     {
       id: 2,
       color: "Green",
       image: variantTwo,
-      available: true,
     },
     {
       id: 3,
       color: "Blue",
       image: variantThree,
-      available: true,
       isDefault: true,
     },
     {
       id: 4,
       color: "Black",
       image: variantFour,
-      available: true,
     },
   ],
   sizes: [
@@ -80,21 +57,17 @@ export const productsSpecification = {
     },
   ],
   bulkOrder: {
-    available: true,
-    link: "#",
-    dimensions: "88 Hug × 26 Hug",
+    title: "Bulk Order",
   },
   actions: {
     personalise: {
       title: "Personalise",
       mobileTitle: "Customize",
       icon: starIcon,
-      available: true,
     },
     addToCart: {
       title: "Add to Cart",
       icon: cartIcon,
-      available: true,
     },
   },
   shipping: {
