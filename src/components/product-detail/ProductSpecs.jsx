@@ -39,7 +39,7 @@ const ProductSpecs = () => {
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className={`rounded-sm cursor-pointer border-1 border-transparent hover:border-black`}
+            className="rounded-lg cursor-pointer border-solid border-2  border-transparent hover:border-black"
           >
             <img
               src={img?.image}
@@ -130,7 +130,7 @@ const ProductSpecs = () => {
             />
           </button>
         </div>
-        <button className="text-[#565656] flex text-base items-center gap-1 common-underline font-aspekta">
+        <button className="text-[#565656] flex sm:text-lg text-base items-center gap-1 common-underline font-aspekta">
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
@@ -141,13 +141,13 @@ const ProductSpecs = () => {
       </div>
       {/* Action Buttons */}
       <div className="flex gap-4 pt-8">
-        <button className="font-eudoxus font-500 flex-1 py-2 border border-[#565656] text-[#565656] transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1 font-base">
+        <button className="font-eudoxus sm:text-lg text-base font-500 flex-1 py-2 border border-[#565656] text-[#565656] transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1">
           <img src={starIcon} alt="star-icon" />
           {isMobileScreen
             ? productsSpecification?.actions?.personalise?.mobileTitle
             : productsSpecification?.actions?.personalise?.title}
         </button>
-        <button className="font-eudoxus font-500 flex-1 py-2 bg-black border-[#565656] text-white transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1 font-base">
+        <button className="font-eudoxus flex-1 py-2 bg-black border-[#565656] text-white transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1 text-base">
           <img src={cartIcon} alt="cart-icon" />
           <span className="underline underline-offset-2">
             {productsSpecification?.actions?.addToCart?.title}
@@ -157,7 +157,7 @@ const ProductSpecs = () => {
       {/* Check Availability */}
       <div className="flex flex-col-reverse sm:flex-col">
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium sm:text-xl text-base font-eudoxus">
+          <p className="font-medium sm:text-xl text-base font-eudoxus text-palette-black">
             Check availability
           </p>
           <div className="flex gap-2">
