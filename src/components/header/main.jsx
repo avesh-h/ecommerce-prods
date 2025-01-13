@@ -47,9 +47,12 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="absolute right-8 top-3 flex flex-row gap-x-8 items-start">
-          {navIconsArray?.map((items) => {
+          {navIconsArray?.map((items, i) => {
             return (
-              <button className="hover:border-0 hover:border-b-4 hover:border-[#DD1E24] hover:pb-1">
+              <button
+                key={`${items?.alt}-${i}`}
+                className="hover:border-0 hover:border-b-4 hover:border-[#DD1E24] hover:pb-1"
+              >
                 <img src={items?.src} alt={items?.alt} className="" />
               </button>
             );
@@ -166,10 +169,10 @@ const Sidebar = ({ open, setOpen }) => {
           </button>
           <div>
             <ul>
-              {navbarLinks?.map((link) => {
+              {navbarLinks?.map((link, i) => {
                 return (
                   <li
-                    key={link?.id}
+                    key={`${link?.id}-${i}`}
                     className="cursor-pointer py-2 px-3 hover:bg-slate-400/50 rounded-md"
                   >
                     {link?.title}

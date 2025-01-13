@@ -24,7 +24,7 @@ const ProductSpecs = () => {
           />
           {productsSpecification?.rating?.score}
         </p>
-        <div className="flex justify-between w-full sm:hidden">
+        <div className="flex justify-between w-full sm:hidden font-eudoxus">
           <p className="text-xs">
             4 Colors &gt;
             <span className="font-bold text-palette-black pl-1">Black</span>
@@ -136,15 +136,15 @@ const ProductSpecs = () => {
       </div>
       {/* Action Buttons */}
       <div className="flex gap-4 pt-8">
-        <button className="font-eudoxus font-500 flex-1 py-2 border border-[#565656] text-[#565656] transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus font-500 flex-1 py-2 border border-[#565656] text-[#565656] transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1 font-base">
           <img src={starIcon} alt="star-icon" />
           {isMobileScreen
             ? productsSpecification?.actions?.personalise?.mobileTitle
             : productsSpecification?.actions?.personalise?.title}
         </button>
-        <button className="font-eudoxus font-500 flex-1 py-2 bg-black border-[#565656] text-white transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus font-500 flex-1 py-2 bg-black border-[#565656] text-white transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1 font-base">
           <img src={cartIcon} alt="cart-icon" />
-          <span className="common-underline">
+          <span className="underline underline-offset-2">
             {productsSpecification?.actions?.addToCart?.title}
           </span>
         </button>
