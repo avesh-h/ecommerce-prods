@@ -9,8 +9,8 @@ const Main = () => {
   return (
     <div className="w-full">
       <div className="w-full">
+        <Navbar />
         <div className="max-w-[1440px] mx-auto">
-          <Navbar />
           <ProductDetail />
           <div className="px-6 lg:px-8">
             <Tab />
