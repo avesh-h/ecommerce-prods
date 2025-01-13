@@ -39,7 +39,7 @@ const ProductSpecs = () => {
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className="rounded-lg cursor-pointer border-solid border-2  border-transparent hover:border-black"
+            className="rounded-lg cursor-pointer border-solid border border-transparent hover:border-black"
           >
             <img
               src={img?.image}
@@ -81,12 +81,12 @@ const ProductSpecs = () => {
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className={`rounded-xl cursor-pointer border-2 border-transparent hover:border-black`}
+            className={`rounded-xl cursor-pointer border border-transparent hover:border-black`}
           >
             <img
               src={img?.image}
               alt={`Product view ${index + 1}`}
-              className="w-16 h-16 object-cover"
+              className="w-20 h-16 object-contain"
             />
           </div>
         ))}

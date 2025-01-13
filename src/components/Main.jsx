@@ -11,7 +11,7 @@ const Main = () => {
     <div className="w-full">
       <div className="w-full max-w-screen-2xl mx-auto">
         <Navbar />
-        <div className="sm:w-10/12 xs:max-w-[1440px] mx-auto">
+        <div className="max-w-[1203px] xs:max-w-[1440px] mx-auto">
           <ProductDetail />
           <div className="px-6 lg:px-8">
             <Tab />
@@ -29,3 +29,17 @@ const Main = () => {
 };
 
 export default Main;
+
+// const Container = () => {
+//   <div className="max-w-[1440px] mx-auto px-[34px]">
+//     {/* navbar */}
+//     <div className="max-w-[1253] mx-auto px-[25px]">
+//       {/* product detail */}
+//       {/* tab */}
+//     </div>
+//     {/* products */}
+//     {/* footer */}
+//   </div>;
+// };
+
+// tablet = 25px
