@@ -8,11 +8,9 @@ import ProductDetail from "./product-detail/ProductDetail";
 const Main = () => {
   return (
     <div className="w-full">
-      <div className="container mx-auto">
-        <Navbar />
-      </div>
       <div className="w-full">
         <div className="max-w-[1440px] mx-auto">
+          <Navbar />
           <ProductDetail />
           <div className="px-6 lg:px-8">
             <Tab />
