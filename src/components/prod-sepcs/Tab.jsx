@@ -52,11 +52,11 @@ const Tab = () => {
           <p className="sm:text-base text-sm font-400 font-aspekta text-palette-gray mb-2 sm:mb-0">
             {prodSpecContent[currentTab]?.details}
           </p>
-          <ul className="list-disc pl-6 text-gray-700">
+          <ul className="pl-6 text-palette-gray">
             {prodSpecContent[activeTab]?.features?.map((feature, index) => (
               <li
                 key={index}
-                className="font-aspekta text-palette-gray mb-2 sm:pt-0.5 pt-2"
+                className="list-disc font-aspekta text-palette-gray mb-2 sm:pt-0.5 pt-1 [&::marker]:!text-[0.7rem]"
               >
                 {feature}
               </li>
