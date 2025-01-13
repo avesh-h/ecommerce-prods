@@ -14,7 +14,7 @@ const ProductDetail = () => {
         </div>
       </div>
       <section className="hidden sm:flex flex-col lg:flex-row sm:pt-10 pt-4 px-4 sm:px-6 lg:px-8 gap-8">
-        <div className="max-w-[600px] sm:block hidden">
+        <div className="max-w-full lg:max-w-[590px] sm:block hidden">
           <ProductCarousel />
         </div>
         <div>
