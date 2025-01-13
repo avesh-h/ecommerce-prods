@@ -8,16 +8,17 @@ import ProductDetail from "./product-detail/ProductDetail";
 const Main = () => {
   return (
     <div className="w-full">
-      <div className="w-full">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <Navbar />
-        <div className="max-w-[1440px] mx-auto">
+        <div className="w-10/12 mx-auto">
           <ProductDetail />
           <div className="px-6 lg:px-8">
             <Tab />
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
+      {/* issue below sections */}
+      <div className="max-w-screen-2xl mx-auto">
         <div className="px-6 sm:px-8">
           <Products />
         </div>
