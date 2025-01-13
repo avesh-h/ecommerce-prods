@@ -57,7 +57,7 @@ export const products = [
 export const mobileProducts = [
   {
     id: 1,
-    image: cupOne,
+    image: cupThree,
     title: "Hampshire 6 Pieces Ceramic Mug",
     colors: "4 Colours",
     price: "₹902",
@@ -68,7 +68,7 @@ export const mobileProducts = [
   },
   {
     id: 2,
-    image: cupTwo,
+    image: cupOne,
     title: "Retro 6 Pieces Ceramic Mug",
     colors: "4 Colours",
     price: "₹9202",
@@ -77,7 +77,7 @@ export const mobileProducts = [
   },
   {
     id: 3,
-    image: cupThree,
+    image: cupFour,
     title: "Retro 6 Pieces Ceramic Mug",
     colors: "4 Colours",
     price: "₹1099",
@@ -86,7 +86,7 @@ export const mobileProducts = [
   },
   {
     id: 4,
-    image: cupFour,
+    image: cupTwo,
     title: "Military 6 Pieces Ceramic Mug",
     colors: "4 Colours",
     price: "₹1499",
