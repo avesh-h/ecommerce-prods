@@ -35,11 +35,11 @@ const ProductSpecs = () => {
         </p>
       </div>
       {/* Product Images */}
-      <div className="sm:hidden flex pt-2">
+      <div className="sm:hidden flex pt-2 gap-2">
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className={`rounded-xl cursor-pointer border-2 border-transparent hover:border-black`}
+            className={`rounded-sm cursor-pointer border-1 border-transparent hover:border-black`}
           >
             <img
               src={img?.image}
