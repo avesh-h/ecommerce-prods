@@ -2,6 +2,10 @@ import productImg from "../assets/prod-img.png";
 import prodTwo from "../assets/grp-prod-3.png";
 import prodThree from "../assets/grp-prod-2.png";
 import prodFour from "../assets/grp-prod-1.png";
+import cupOne from "../assets/cup-1.png";
+import cupTwo from "../assets/cup-2.png";
+import cupThree from "../assets/cup-3.png";
+import cupFour from "../assets/cup-4.png";
 
 export const products = [
   {
@@ -48,4 +52,45 @@ export const products = [
   //   customizable: true,
   //   groupProds: [prodFour, prodTwo, prodThree, prodFour],
   // },
+];
+
+export const mobileProducts = [
+  {
+    id: 1,
+    image: cupOne,
+    title: "Hampshire 6 Pieces Ceramic Mug",
+    colors: "4 Colours",
+    price: "₹902",
+    originalPrice: "₹1,999",
+    discount: "50% off",
+    customizable: true,
+    groupProds: [prodFour, prodTwo, prodThree, prodFour],
+  },
+  {
+    id: 2,
+    image: cupTwo,
+    title: "Retro 6 Pieces Ceramic Mug",
+    colors: "4 Colours",
+    price: "₹9202",
+    customizable: true,
+    groupProds: [prodFour, prodTwo],
+  },
+  {
+    id: 3,
+    image: cupThree,
+    title: "Retro 6 Pieces Ceramic Mug",
+    colors: "4 Colours",
+    price: "₹1099",
+    customizable: true,
+    groupProds: [prodFour, prodTwo],
+  },
+  {
+    id: 4,
+    image: cupFour,
+    title: "Military 6 Pieces Ceramic Mug",
+    colors: "4 Colours",
+    price: "₹1499",
+    customizable: true,
+    groupProds: [prodFour, prodTwo],
+  },
 ];

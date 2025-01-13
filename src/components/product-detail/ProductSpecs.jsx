@@ -100,7 +100,7 @@ const ProductSpecs = () => {
             className={`py-1 font-eudoxus ${
               selectedSize === size?.value
                 ? "border-b-4 border-red-500 font-bold"
-                : "text-gray-500 font-normal"
+                : "text-gray-500 font-normal border-b-4 border-transparent"
             }`}
           >
             {size?.value}
@@ -116,7 +116,7 @@ const ProductSpecs = () => {
           >
             <img src={productsSpecification?.icons?.minus} alt="minus Icon" />
           </button>
-          <p className="font-bold font-eudoxus border-b-4 border-red-500 w-6 text-center sm:text-xl text-base">
+          <p className="font-bold font-eudoxus border-b-4 border-red-500 w-6 text-center sm:text-xl text-base pb-2">
             {quantity}
           </p>
           <button
@@ -140,7 +140,7 @@ const ProductSpecs = () => {
         </button>
       </div>
       {/* Action Buttons */}
-      <div className="flex gap-4 pt-8">
+      <div className="flex gap-4 pt-8 sm:pt-10">
         <button className="font-eudoxus sm:text-lg text-base font-500 flex-1 py-2 border border-[#565656] text-[#565656] transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1">
           <img src={starIcon} alt="star-icon" />
           {isMobileScreen

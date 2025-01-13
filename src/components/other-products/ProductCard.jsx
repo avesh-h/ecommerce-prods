@@ -31,12 +31,17 @@ const ProductCard = ({ product }) => {
               <span className="font-eudoxus font-bold sm:text-lg text-base">
                 {product?.price}
               </span>
-              <span className="font-eudoxus line-through text-[10px] sm:text-base text-black-400 font-thin sm:font-normal text-nowrap">
-                {`INR ${product?.originalPrice}`}
-              </span>
-              <span className="font-aspekta sm:bg-green-100 bg-white font-normal text-[10px] p-0.5 rounded text-nowrap">
-                {product?.discount}
-              </span>
+              {product?.originalPrice ? (
+                <span className="font-eudoxus line-through text-[10px] sm:text-base text-black-400 font-thin sm:font-normal text-nowrap">
+                  {`INR ${product?.originalPrice}`}
+                </span>
+              ) : null}
+
+              {product?.discount ? (
+                <span className="font-aspekta sm:bg-green-100 bg-white font-normal text-[10px] px-0.5 py-0.2 rounded text-nowrap">
+                  {product?.discount}
+                </span>
+              ) : null}
             </div>
           </div>
         </div>
