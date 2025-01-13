@@ -62,36 +62,36 @@ function ProductCarousel() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto relative">
-      <div className="mb-4">
-        <Slider ref={slider1} {...mainSliderSettings} className="z-10">
-          {productCarouselImages?.map((img) => (
-            <div key={img.id} className="relative aspect-square">
+    <div className="flex flex-col gap-x-6 w-full md:w-[50%] md:max-w-[590px]">
+      <Slider ref={slider1} {...mainSliderSettings} className="z-10">
+        {productCarouselImages?.map((img) => (
+          <div key={img.id} className="relative aspect-square">
+            <img
+              src={img.image}
+              alt="product"
+              className="w-full h-auto object-cover sm:rounded-lg rounded-none"
+            />
+          </div>
+        ))}
+      </Slider>
+      <Slider
+        variableWidth
+        ref={slider2}
+        {...thumbnailSliderSettings}
+        className="md:block hidden"
+      >
+        {productCarouselImages?.map((img) => (
+          <div key={img.id} className="px-2">
+            <div className="aspect-square">
               <img
                 src={img.image}
-                alt="product"
-                className="w-full h-full object-cover sm:rounded-lg rounded-none"
+                alt="product thumbnail"
+                className="w-24 object-cover rounded-lg cursor-pointer"
               />
             </div>
-          ))}
-        </Slider>
-      </div>
-
-      <div className="pl-1 sm:block hidden">
-        <Slider variableWidth ref={slider2} {...thumbnailSliderSettings}>
-          {productCarouselImages?.map((img) => (
-            <div key={img.id} className="px-2">
-              <div className="aspect-square">
-                <img
-                  src={img.image}
-                  alt="product thumbnail"
-                  className="w-24 object-cover rounded-lg cursor-pointer"
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }

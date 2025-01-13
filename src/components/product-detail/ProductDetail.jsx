@@ -5,7 +5,7 @@ import ProductSpecs from "./ProductSpecs";
 const ProductDetail = () => {
   return (
     <>
-      <div className="block sm:hidden">
+      <div className="block md:hidden sm:mt-12">
         <div className="w-full">
           <ProductCarousel />
         </div>
@@ -13,13 +13,9 @@ const ProductDetail = () => {
           <ProductSpecs />
         </div>
       </div>
-      <section className="hidden sm:flex flex-col lg:flex-row sm:pt-10 pt-4 px-4 sm:px-6 lg:px-8 gap-8">
-        <div className="max-w-full lg:max-w-[590px] sm:block hidden">
-          <ProductCarousel />
-        </div>
-        <div>
-          <ProductSpecs />
-        </div>
+      <section className="hidden w-full md:flex flex-row gap-x-8 md:mt-12">
+        <ProductCarousel />
+        <ProductSpecs />
       </section>
     </>
   );
