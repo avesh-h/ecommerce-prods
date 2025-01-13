@@ -109,9 +109,9 @@
 @media (min-width: 640px) {
   .slick-track {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -134,3 +134,7 @@
   color: #4b5563;
   font-size: 0.8rem; /* Adjust bullet size */
 }
+
+/* .slick-track > .slick-slide {
+  width: fit-content;
+} */

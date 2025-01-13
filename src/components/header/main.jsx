@@ -39,7 +39,7 @@ export const Navbar = () => {
             {navbarLinks?.map((link) => (
               <p
                 key={link?.id}
-                className="text-white cursor-pointer pb-0.5 border-b-[1px] border-transparent hover:border-[#DD1E24] text-base font-light font-eudoxus transition-all duration-300"
+                className="text-white cursor-pointer pb-0.5 border-b-[1px] border-transparent hover:border-[#DD1E24] text-base font-300 font-eudoxus transition-all duration-300"
               >
                 {link?.title}
               </p>

@@ -77,15 +77,15 @@ function ProductCarousel() {
         </Slider>
       </div>
 
-      <div className="px-2 sm:block hidden">
-        <Slider ref={slider2} {...thumbnailSliderSettings}>
+      <div className="pl-1 sm:block hidden">
+        <Slider variableWidth ref={slider2} {...thumbnailSliderSettings}>
           {productCarouselImages?.map((img) => (
             <div key={img.id} className="px-2">
               <div className="aspect-square">
                 <img
                   src={img.image}
                   alt="product thumbnail"
-                  className="w-full h-full object-cover rounded-lg cursor-pointer"
+                  className="w-24 object-cover rounded-lg cursor-pointer"
                 />
               </div>
             </div>
