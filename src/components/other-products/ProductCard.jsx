@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
         <span className="font-eudoxus text-xs">{product?.colors}</span>
         <span className="uppercase text-xs font-eudoxus">Customisable</span>
       </div>
-      <div className="flex gap-1 w-full">
+      <div className="flex gap-1 w-full pt-1 sm:pt-0 ">
         {product?.groupProds?.map((gp, i) => {
           return (
             <img
@@ -27,14 +27,14 @@ const ProductCard = ({ product }) => {
             <h3 className="sm:text-lg text-base font-aspekta sm:text-palette-black text-palette-gray mb-1 font-normal">
               {product?.title}
             </h3>
-            <div className="flex items-center gap-2">
+            <div className="flex sm:items-center items-end sm:gap-2 gap-1.5">
               <span className="font-eudoxus font-bold sm:text-lg text-base">
                 {product?.price}
               </span>
-              <span className="font-eudoxus line-through text-xs sm:text-base text-black-400 font-thin sm:font-normal">
+              <span className="font-eudoxus line-through text-[10px] sm:text-base text-black-400 font-thin sm:font-normal text-nowrap">
                 {`INR ${product?.originalPrice}`}
               </span>
-              <span className="font-aspekta sm:bg-green-100 bg-white font-normal text-xs p-0.5 rounded">
+              <span className="font-aspekta sm:bg-green-100 bg-white font-normal text-[10px] p-0.5 rounded text-nowrap">
                 {product?.discount}
               </span>
             </div>

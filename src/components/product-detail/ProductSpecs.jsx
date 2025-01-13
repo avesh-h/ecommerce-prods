@@ -116,20 +116,25 @@ const ProductSpecs = () => {
           >
             <img src={productsSpecification?.icons?.minus} alt="minus Icon" />
           </button>
-          <p className="font-bold font-eudoxus border-b-2 border-red-500 w-6 text-center text-xl">
+          <p className="font-bold font-eudoxus border-b-2 border-red-500 w-6 text-center sm:text-xl text-base">
             {quantity}
           </p>
           <button
             onClick={() => setQuantity(quantity + 1)}
             className="border-none rounded"
           >
-            <img src={productsSpecification?.icons?.plus} alt="plus Icon" />
+            <img
+              src={productsSpecification?.icons?.plus}
+              className="w-6 sm:w-8"
+              alt="plus Icon"
+            />
           </button>
         </div>
         <button className="text-[#565656] flex text-base items-center gap-1 common-underline font-aspekta">
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
+            className="w-6 sm:w-8"
             alt="order-icon"
           />
         </button>
@@ -166,14 +171,14 @@ const ProductSpecs = () => {
               className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full focus:outline-none focus:ring-0"
             />
             <img src={checkIcon} alt="checkIcon-icon" />
-            <button className="text-palette-black underline underline-offset-2 font-eudoxus">
+            <button className="text-palette-black underline underline-offset-2 font-eudoxus text-base">
               Check
             </button>
           </div>
         </div>
         {/* Return & Shipping */}
         <div className="space-y-2 sm:pt-10 pt-8">
-          <p className="font-medium sm:text-xl text-base font-eudoxus">
+          <p className="sm:font-medium font-bold sm:text-xl text-base font-eudoxus">
             {productsSpecification?.shipping?.title}
           </p>
           <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-palette-gray font-aspekta">

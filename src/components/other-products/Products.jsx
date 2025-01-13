@@ -29,7 +29,7 @@ const Products = () => {
       <div className="py-8 sm:hidden flex items-center w-full justify-center gap-1">
         <button className="text-center flex items-center gap-1 text-base">
           <img src={backReturn} alt="back-return" />
-          <span className="text-base font-eudoxus text-palette-black underline underline-offset-4">
+          <span className="text-base font-eudoxus text-palette-black underline underline-offset-4 font-500">
             Return to catalog
           </span>
         </button>
