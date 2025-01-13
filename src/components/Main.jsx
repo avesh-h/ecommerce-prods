@@ -11,16 +11,16 @@ const Main = () => {
       <div className="container mx-auto">
         <Navbar />
       </div>
-      <div className="flex flex-row justify-center">
-        <div className="sm:container w-full flex flex-col gap-x-4 sm:w-10/12">
+      <div className="w-full">
+        <div className="max-w-[1440px] mx-auto">
           <ProductDetail />
-          <div className="sm:px-0 px-6">
+          <div className="px-6 lg:px-8">
             <Tab />
           </div>
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="sm:px-8 px-6">
+        <div className="px-6 sm:px-8">
           <Products />
         </div>
         <Footer />

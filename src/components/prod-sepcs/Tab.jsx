@@ -10,19 +10,17 @@ const Tab = () => {
   const handleTabChange = (tab) => {
     if (tab === activeTab) return;
 
-    // Trigger fade-out animation
     setIsAnimating(true);
 
     setTimeout(() => {
-      // Switch tab after fade-out is complete
       setActiveTab(tab);
       setCurrentTab(tab);
       setIsAnimating(false); // Trigger fade-in animation
-    }, 200); // Match the duration of the fade-out animation
+    }, 200);
   };
 
   return (
-    <div className="sm:pt-16 pt-9">
+    <div className="sm:pt-16 pt-9 main-container">
       {/* Tab Navigation */}
       <div className="font-eudoxus sm:text-xl text-sm text-center text-palette-gray">
         <ul className="flex justify-between sm:gap-14 sm:justify-start">

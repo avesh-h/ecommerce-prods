@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { productCarouselImages } from "../../static/product-details";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-const CustomArrow = ({ direction, onClick, className }) => {
+const CustomArrow = ({ direction, onClick }) => {
   const Icon = direction === "next" ? SlArrowRight : SlArrowLeft;
   return (
     <button
@@ -62,7 +62,7 @@ function ProductCarousel() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto relative">
       <div className="mb-4">
         <Slider ref={slider1} {...mainSliderSettings} className="z-10">
           {productCarouselImages?.map((img) => (
