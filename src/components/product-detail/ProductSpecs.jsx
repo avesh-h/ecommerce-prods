@@ -59,7 +59,7 @@ const ProductSpecs = () => {
           <span className="font-bold sm:text-2xl text-base font-eudoxus">
             {productsSpecification?.pricing?.currentPrice}
           </span>
-          <span className="line-through text-xs sm:text-base text-black-400 font-thin">
+          <span className="line-through text-sm sm:text-base text-black-400 font-thin">
             {productsSpecification?.pricing?.originalPrice}
           </span>
           <span className="font-normal sm:text-sm text-xs p-0.5 rounded font-aspekta">
