@@ -25,7 +25,7 @@ export const Newsletter = () => {
           placeholder="Enter your email address"
         />
         <div className="flex flex-row-reverse gap-x-1 mt-3.5">
-          <p className="font-normal sm:text-lg text-base underline decoration-1 underline-offset-4 font-eudoxus">
+          <p className="font-normal sm:text-lg text-base underline decoration-1 underline-offset-4 font-eudoxus cursor-pointer hover:opacity-75">
             Subscribe
           </p>
           <img src={emailSvg} alt="email-svg" />

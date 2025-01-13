@@ -64,13 +64,6 @@ export const Navbar = () => {
   );
 };
 
-// remove this if examiner dont want this navbar animation in mobile navbar
-// lastScrollTop
-// navRef
-// whole useEffect
-//remove ref of the nav element
-// remove this classes from the nav "fixed z-20 w-full"
-
 let lastScrollTop = 0;
 const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
@@ -78,7 +71,7 @@ const NavbarMobile = () => {
 
   useEffect(() => {
     const hideShowNav = () => {
-      const currentScrollTop = window.scrollY; // Current vertical scroll position
+      const currentScrollTop = window.scrollY;
 
       if (currentScrollTop > lastScrollTop) {
         navRef?.current?.classList.remove("translate-y-0");

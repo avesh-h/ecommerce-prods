@@ -3,6 +3,7 @@ import cartIcon from "../../assets/svgs/cart-2.svg";
 import starIcon from "../../assets/svgs/Shopicons_Light_Stars.svg";
 import checkIcon from "../../assets/svgs/Shopicons_Light_Checkmark.svg";
 import { productsSpecification } from "../../static/product-details";
+import useMobileScreen from "../../hooks/useMobileScreen";
 
 const ProductSpecs = () => {
   const [selectedSize, setSelectedSize] = useState(
@@ -10,6 +11,7 @@ const ProductSpecs = () => {
   );
   const [quantity, setQuantity] = useState(1);
   const [pincode, setPincode] = useState("");
+  const isMobileScreen = useMobileScreen();
 
   return (
     <div>
@@ -134,11 +136,13 @@ const ProductSpecs = () => {
       </div>
       {/* Action Buttons */}
       <div className="flex gap-4 pt-8">
-        <button className="font-eudoxus font-500 flex-1 py-2 border border-[#565656] text-[#565656] rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus font-500 flex-1 py-2 border border-[#565656] text-[#565656] transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1">
           <img src={starIcon} alt="star-icon" />
-          {productsSpecification?.actions?.personalise?.title}
+          {isMobileScreen
+            ? productsSpecification?.actions?.personalise?.mobileTitle
+            : productsSpecification?.actions?.personalise?.title}
         </button>
-        <button className="font-eudoxus font-500 flex-1 py-2 bg-black border-[#565656] text-white rounded flex justify-center items-center gap-1">
+        <button className="font-eudoxus font-500 flex-1 py-2 bg-black border-[#565656] text-white transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1">
           <img src={cartIcon} alt="cart-icon" />
           <span className="common-underline">
             {productsSpecification?.actions?.addToCart?.title}
@@ -154,13 +158,17 @@ const ProductSpecs = () => {
           <div className="flex gap-2">
             <input
               type="text"
-              placeholder="Enter pin code"
+              placeholder={
+                isMobileScreen ? "Enter 6-digit pin code" : "Enter pin code"
+              }
               value={pincode}
               onChange={(e) => setPincode(e.target.value)}
               className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full focus:outline-none focus:ring-0"
             />
             <img src={checkIcon} alt="checkIcon-icon" />
-            <button className="text-palette-black underline">Check</button>
+            <button className="text-palette-black underline underline-offset-2 font-eudoxus">
+              Check
+            </button>
           </div>
         </div>
         {/* Return & Shipping */}

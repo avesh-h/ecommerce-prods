@@ -60,7 +60,7 @@ export const Links = () => {
                     <div className="flex flex-row gap-x-2 font-eudoxus cursor-pointer">
                       <p
                         key={item?.id}
-                        className="font-normal text-xs md:text-base py-1 text-palette-gray text-nowrap"
+                        className="font-normal text-xs md:text-base py-1 text-palette-gray hover:opacity-75 text-nowrap"
                       >
                         {item?.text}
                       </p>
