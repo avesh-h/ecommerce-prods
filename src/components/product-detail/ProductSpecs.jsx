@@ -116,7 +116,7 @@ const ProductSpecs = () => {
           >
             <img src={productsSpecification?.icons?.minus} alt="minus Icon" />
           </button>
-          <p className="font-bold font-eudoxus border-b-2 border-red-500 w-6 text-center sm:text-xl text-base">
+          <p className="font-bold font-eudoxus border-b-4 border-red-500 w-6 text-center sm:text-xl text-base">
             {quantity}
           </p>
           <button
