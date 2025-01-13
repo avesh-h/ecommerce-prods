@@ -8,7 +8,9 @@ import ProductDetail from "./product-detail/ProductDetail";
 const Main = () => {
   return (
     <div className="w-full">
-      <Navbar />
+      <div className="container mx-auto">
+        <Navbar />
+      </div>
       <div className="flex flex-row justify-center">
         <div className="sm:container w-full flex flex-col gap-x-4 sm:w-10/12">
           <ProductDetail />
@@ -17,10 +19,12 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="sm:px-8 px-6">
-        <Products />
+      <div className="container mx-auto">
+        <div className="sm:px-8 px-6">
+          <Products />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
