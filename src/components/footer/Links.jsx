@@ -26,11 +26,11 @@ export const Links = () => {
   return (
     <div className="w-full flex flex-col gap-y-3 lg:flex-row lg:gap-x-[15%]">
       {/* Cello social links */}
-      <div className="flex flex-row xs:items-center lg:flex-col justify-between">
+      <div className="flex flex-row items-center lg:flex-col justify-between">
         <img
           src={celloIcon}
           alt="cello-icon"
-          className="xs:w-[50px] xs:h-[25px]"
+          className="w-[50px] h-[25px] lg:w-full lg:min-w-[106px] lg:h-auto lg:self-start"
         />
 
         <div className="flex flex-row gap-x-4 px-[5px] py-2 lg:p-0">
@@ -47,7 +47,7 @@ export const Links = () => {
         </div>
       </div>
       {/* footer links */}
-      <div className="grid grid-cols-2 gap-x-15 sm:gap-x-20 gap-y-10 place-items-start lg:flex lg:flex-row lg:grow lg:justify-between">
+      <div className="grid grid-cols-2 gap-x-15 gap-y-10 place-items-start lg:flex lg:flex-row lg:grow lg:justify-between">
         {footerMenu?.map((menu, i) => {
           return (
             <div
@@ -64,7 +64,7 @@ export const Links = () => {
                       key={item?.id}
                       className="flex flex-row gap-x-2 font-eudoxus cursor-pointer"
                     >
-                      <p className="font-normal text-xs md:text-base py-1 text-palette-gray hover:opacity-75 sm:text-wrap text-nowrap">
+                      <p className="font-normal text-xs md:text-base py-1 text-palette-gray hover:opacity-75 text-nowrap">
                         {item?.text}
                       </p>
                       {item?.new && (
