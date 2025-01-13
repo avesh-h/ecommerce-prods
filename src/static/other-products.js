@@ -1,5 +1,4 @@
 import productImg from "../assets/prod-img.png";
-import prodOne from "../assets/grp-prod-4.png";
 import prodTwo from "../assets/grp-prod-3.png";
 import prodThree from "../assets/grp-prod-2.png";
 import prodFour from "../assets/grp-prod-1.png";
@@ -14,7 +13,7 @@ export const products = [
     originalPrice: "₹7,999",
     discount: "50% off",
     customizable: true,
-    groupProds: [prodOne, prodTwo, prodThree, prodFour],
+    groupProds: [prodFour, prodTwo, prodThree, prodFour],
   },
   {
     id: 2,
@@ -25,7 +24,7 @@ export const products = [
     originalPrice: "₹7,999",
     discount: "50% off",
     customizable: true,
-    groupProds: [prodOne, prodTwo, prodThree, prodFour],
+    groupProds: [prodFour, prodTwo, prodThree, prodFour],
   },
   {
     id: 3,
@@ -36,7 +35,7 @@ export const products = [
     originalPrice: "₹7,999",
     discount: "50% off",
     customizable: true,
-    groupProds: [prodOne, prodTwo, prodThree, prodFour],
+    groupProds: [prodFour, prodTwo, prodThree, prodFour],
   },
   {
     id: 4,
@@ -47,6 +46,6 @@ export const products = [
     originalPrice: "₹7,999",
     discount: "50% off",
     customizable: true,
-    groupProds: [prodOne, prodTwo, prodThree, prodFour],
+    groupProds: [prodFour, prodTwo, prodThree, prodFour],
   },
 ];

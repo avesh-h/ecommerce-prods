@@ -12,7 +12,12 @@ const ProductCard = ({ product }) => {
       <div className="flex gap-1 w-full">
         {product?.groupProds?.map((gp, i) => {
           return (
-            <img src={gp} key={`${gp}-${i}`} className="pt-1" alt="grpImg" />
+            <img
+              src={gp}
+              key={`${gp}-${i}`}
+              className="border border-solid border-transparent rounded-md hover:border-black cursor-pointer"
+              alt="grpImg"
+            />
           );
         })}
       </div>

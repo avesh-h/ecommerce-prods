@@ -7,9 +7,9 @@ const Products = () => {
   return (
     <div className="sm:pt-16 pt-0">
       <div className="py-8 sm:hidden flex items-center w-full justify-center gap-1">
-        <button className="text-center common-underline flex items-center gap-1 text-base">
+        <button className="text-center flex items-center gap-1 text-base">
           <img src={backReturn} alt="back-return" />
-          <span className="text-base font-eudoxus text-palette-black">
+          <span className="text-base font-eudoxus text-palette-black underline underline-offset-4">
             Return to catalog
           </span>
         </button>

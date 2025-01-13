@@ -160,7 +160,7 @@ const ProductSpecs = () => {
               className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full focus:outline-none focus:ring-0"
             />
             <img src={checkIcon} alt="checkIcon-icon" />
-            <button className="text-gray-600 underline">Check</button>
+            <button className="text-palette-black underline">Check</button>
           </div>
         </div>
         {/* Return & Shipping */}
@@ -168,9 +168,9 @@ const ProductSpecs = () => {
           <p className="font-medium sm:text-xl text-base font-eudoxus">
             {productsSpecification?.shipping?.title}
           </p>
-          <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-gray-600 font-aspekta">
+          <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-palette-gray font-aspekta">
             {productsSpecification?.shipping?.details?.map((item, index) => (
-              <li key={index} className="marker:text-gray-600">
+              <li key={index} className="marker:text-palette-gray">
                 {item}
               </li>
             ))}
