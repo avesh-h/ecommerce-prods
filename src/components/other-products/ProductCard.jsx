@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
           );
         })}
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-2 text-sm flex-1 pt-1">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm flex-1 pt-1">
         <div className="flex flex-col">
           <div>
             <h3 className="sm:text-lg text-base font-aspekta sm:text-palette-black text-palette-gray mb-1 font-normal">
