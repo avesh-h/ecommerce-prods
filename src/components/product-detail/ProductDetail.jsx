@@ -13,8 +13,8 @@ const ProductDetail = () => {
           <ProductSpecs />
         </div>
       </div>
-      <section className="hidden sm:flex flex-col sm:flex-row sm:pt-10 pt-4 gap-8">
-        <div className="sm:w-1/2 w-full sm:block hidden">
+      <section className="hidden sm:flex flex-col lg:flex-row sm:pt-10 pt-4 gap-8">
+        <div className="lg:w-1/2 w-full sm:block hidden">
           <ProductCarousel />
         </div>
         <div>
