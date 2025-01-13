@@ -3,7 +3,7 @@ import addCartIcon from "../../assets/add-cart-btn.png";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="rounded-lg shadow-sm overflow-hidden">
+    <div className="rounded-lg overflow-hidden">
       <img src={product?.image} alt="Product 2" className="w-full" />
       <div className="sm:flex hidden justify-between items-center text-sm mb-2 font-medium text-palette-gray pt-1">
         <span className="font-eudoxus text-xs">{product?.colors}</span>
