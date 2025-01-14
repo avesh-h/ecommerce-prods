@@ -68,7 +68,7 @@
 
 /* Common tailwind classes */
 .common-underline {
-  @apply leading-[1.61rem] underline underline-offset-4 decoration-solid;
+  @apply leading-[1.61rem] underline underline-offset-4 decoration-[1px];
 }
 
 @media (prefers-reduced-motion: no-preference) {
