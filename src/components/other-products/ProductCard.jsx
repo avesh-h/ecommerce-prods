@@ -45,7 +45,7 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
         </div>
-        <div className="w-full sm:w-2/5 self-end flex justify-between sm:justify-end items-center">
+        <div className="w-full sm:w-4/5 self-end flex justify-between sm:justify-end items-center">
           <p className="underline block sm:hidden">View Details</p>
           <button className="flex-shrink-0 w-8 sm:w-10">
             <img src={addCartIcon} alt="add-cart" />
