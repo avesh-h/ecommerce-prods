@@ -3,13 +3,15 @@ import addCartIcon from "../../assets/add-cart-btn.png";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="rounded-lg overflow-hidden">
+    <div className="rounded-lg overflow-hidden cursor-pointer">
       <img src={product?.image} alt="Product 2" className="w-full" />
       <div className="sm:flex hidden justify-between items-center text-sm mb-2 font-medium text-palette-gray pt-1">
         <span className="font-eudoxus text-xs">{product?.colors}</span>
-        <span className="uppercase text-xs font-eudoxus">Customisable</span>
+        <span className="uppercase text-xs font-eudoxus tracking-[0.075rem]">
+          Customisable
+        </span>
       </div>
-      <div className="flex gap-1 w-full pt-1 sm:pt-0 ">
+      <div className="flex gap-1 w-full pt-1 sm:pt-0">
         {product?.groupProds?.map((gp, i) => {
           return (
             <img

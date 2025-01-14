@@ -30,7 +30,7 @@ export const Links = () => {
         <img
           src={celloIcon}
           alt="cello-icon"
-          className="w-[50px] h-[25px] lg:w-full lg:min-w-[106px] lg:h-auto lg:self-start"
+          className="w-[50px] h-[25px] lg:w-auto lg:min-w-[106px] lg:h-auto lg:self-start"
         />
 
         <div className="flex flex-row gap-x-4 px-[5px] py-2 lg:p-0">

@@ -5,7 +5,6 @@ import Footer from "./footer/Footer";
 import { Navbar } from "./header/main";
 import ProductDetail from "./product-detail/ProductDetail";
 
-/* issue below sections */
 const Main = () => {
   return (
     <div className="w-full">
