@@ -86,7 +86,7 @@ const ProductSpecs = () => {
             <img
               src={img?.image}
               alt={`Product view ${index + 1}`}
-              className="w-full h-16 object-contain"
+              className="w-full object-contain"
             />
           </div>
         ))}
