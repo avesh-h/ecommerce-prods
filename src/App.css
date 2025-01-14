@@ -115,6 +115,13 @@
   }
 }
 
+/* custom class */
+@media (max-width: 640px) {
+  .main-slider {
+    padding-top: 44px;
+  }
+}
+
 .custom-bullet {
   list-style: none;
 }

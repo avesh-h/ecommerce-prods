@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { productCarouselImages } from "../../static/product-details";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import useMobileScreen from "../../hooks/useMobileScreen";
 
 const CustomArrow = ({ direction, onClick }) => {
   const Icon = direction === "next" ? SlArrowRight : SlArrowLeft;
@@ -22,6 +23,7 @@ function ProductCarousel() {
   const [nav2, setNav2] = useState(null);
   const slider1 = useRef(null);
   const slider2 = useRef(null);
+  const isMobileScreen = useMobileScreen();
 
   useEffect(() => {
     setNav1(slider1.current);
@@ -64,11 +66,15 @@ function ProductCarousel() {
   return (
     <div className="max-w-2xl mx-auto relative">
       <div className="mb-4">
-        <Slider ref={slider1} {...mainSliderSettings} className="z-10">
+        <Slider
+          ref={slider1}
+          {...mainSliderSettings}
+          className="z-10 main-slider"
+        >
           {productCarouselImages?.map((img) => (
-            <div key={img.id} className="relative aspect-square">
+            <div key={img.id} className="relative">
               <img
-                src={img.image}
+                src={isMobileScreen ? img?.mobileImage : img?.image}
                 alt="product"
                 className="w-full h-full object-cover sm:rounded-lg rounded-none"
               />

@@ -9,15 +9,18 @@ import plusIcon from "../assets/svgs/Shopicons_Light_Plus.svg";
 import starIcon from "../assets/svgs/Shopicons_Light_Stars.svg";
 import ratingIcon from "../assets/svgs/Shopicons_Filled_Star.svg";
 import prodImage from "../assets/main-prod-2.png";
+import mobileProdImage from "../assets/mobile-main-prod.png";
 
 export const productCarouselImages = [
   {
     id: 1,
     image: prodImage,
+    mobileImage: mobileProdImage,
   },
   {
     id: 2,
     image: prodImage,
+    mobileImage: mobileProdImage,
   },
 ];
 
