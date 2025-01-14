@@ -70,7 +70,7 @@ export const Links = () => {
                         {item?.text}
                       </p>
                       {item?.new && (
-                        <button className="border-[1px] border-[#DD1E24] rounded px-2.5 text-[#DD1E24] text-xs font-normal h-6">
+                        <button className="border-[1px] border-[#DD1E24] rounded px-2.5 text-[#DD1E24] text-xs font-normal h-6 font-poppins">
                           New
                         </button>
                       )}

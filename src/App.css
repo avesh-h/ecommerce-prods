@@ -72,6 +72,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/ttf/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
 /* Common tailwind classes */
 .common-underline {
   @apply leading-[1.61rem] underline underline-offset-4 decoration-[1px];

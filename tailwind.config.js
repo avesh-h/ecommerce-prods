@@ -18,6 +18,7 @@ module.exports = {
       fontFamily: {
         aspekta: ["Aspekta", "sans-serif"],
         eudoxus: ["Eudoxus", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       fontWeight: {
         50: "50",
