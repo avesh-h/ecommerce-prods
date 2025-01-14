@@ -27,11 +27,13 @@ export const Links = () => {
     <div className="w-full flex flex-col gap-y-3 lg:flex-row lg:gap-x-[15%]">
       {/* Cello social links */}
       <div className="flex flex-row items-center lg:flex-col justify-between">
-        <img
-          src={celloIcon}
-          alt="cello-icon"
-          className="w-[50px] h-[25px] lg:w-auto lg:min-w-[106px] lg:h-auto lg:self-start"
-        />
+        <a className="cursor-pointer" href="#navbar">
+          <img
+            src={celloIcon}
+            alt="cello-icon"
+            className="w-[50px] h-[25px] lg:w-auto lg:min-w-[106px] lg:h-auto lg:self-start"
+          />
+        </a>
 
         <div className="flex flex-row gap-x-4 px-[5px] py-2 lg:p-0">
           {socialIconsArray?.map((item) => {
@@ -40,7 +42,7 @@ export const Links = () => {
                 key={item?.alt}
                 src={item?.src}
                 alt={item?.alt}
-                className="h-6 w-6 lg:h-8 lg:w-8"
+                className="h-6 w-6 lg:h-8 lg:w-8 cursor-pointer hover:opacity-75"
               />
             );
           })}

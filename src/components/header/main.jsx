@@ -25,7 +25,7 @@ export const Navbar = () => {
   return isMobileScreen ? (
     <NavbarMobile />
   ) : (
-    <nav>
+    <nav id="navbar">
       <div className="bg-[#141313] py-3 relative">
         <div className="w-5/7 flex flex-col gap-y-[18px]">
           <div className="w-fit self-center">
@@ -104,6 +104,7 @@ const NavbarMobile = () => {
         className={clsx(
           "bg-[#141313] flex flex-row gap-x-6 px-6 pt-1 items-center fixed z-20 w-full"
         )}
+        id="navbar"
       >
         <button onClick={() => setOpen((prev) => !prev)}>
           <img src={menuIcon} alt="menu-icon" />

@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
           >
             View Details
           </a>
-          <button className="flex-shrink-0 w-8 sm:w-10">
+          <button className="flex-shrink-0 w-8 sm:w-10 hover:opacity-75">
             <img src={addCartIcon} alt="add-cart" />
           </button>
         </div>

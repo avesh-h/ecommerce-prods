@@ -30,7 +30,7 @@ const ProductSpecs = () => {
             <span className="font-bold text-palette-black pl-1">Black</span>
           </p>
         </div>
-        <p className="uppercase sm:text-base text-xs underline underline-offset-2 font-eudoxus font-normal">
+        <p className="uppercase sm:text-base text-xs underline underline-offset-2 font-eudoxus font-normal tracking-[0.075rem] hover:opacity-75 cursor-pointer">
           {productsSpecification?.rating?.text}
         </p>
       </div>
@@ -130,7 +130,7 @@ const ProductSpecs = () => {
             />
           </button>
         </div>
-        <button className="text-[#565656] flex sm:text-lg text-base items-center gap-1 common-underline font-aspekta">
+        <button className="text-[#565656] flex sm:text-lg text-base items-center gap-1 common-underline font-aspekta hover:opacity-75">
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
@@ -170,8 +170,8 @@ const ProductSpecs = () => {
               onChange={(e) => setPincode(e.target.value)}
               className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full focus:outline-none focus:ring-0"
             />
-            <img src={checkIcon} alt="checkIcon-icon" />
-            <button className="text-palette-black underline underline-offset-2 font-eudoxus text-base">
+            <button className="text-palette-black flex items-center gap-1 underline underline-offset-2 font-eudoxus text-base hover:opacity-60">
+              <img src={checkIcon} alt="checkIcon-icon" />
               Check
             </button>
           </div>
