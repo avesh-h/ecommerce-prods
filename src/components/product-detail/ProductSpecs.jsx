@@ -30,7 +30,7 @@ const ProductSpecs = () => {
             <span className="font-bold text-palette-black pl-1">Black</span>
           </p>
         </div>
-        <p className="uppercase sm:text-base text-xs common-underline underline-offset-2 font-eudoxus font-normal tracking-[0.075rem] hover:opacity-75 cursor-pointer">
+        <p className="uppercase sm:text-base text-xs underline decoration-[1px] underline-offset-2 font-eudoxus font-normal tracking-[0.075rem] hover:opacity-75 cursor-pointer">
           {productsSpecification?.rating?.text}
         </p>
       </div>
@@ -134,7 +134,7 @@ const ProductSpecs = () => {
           Bulk Order
           <img
             src={productsSpecification?.icons?.arrowRight}
-            className="w-6 sm:w-8"
+            className="w-6"
             alt="order-icon"
           />
         </button>
@@ -170,7 +170,7 @@ const ProductSpecs = () => {
               onChange={(e) => setPincode(e.target.value)}
               className="border-0 border-b-2 border-[#333333] bg-transparent font-normal text-sm placeholder-shown:px-0 pt-0 md:placeholder-shown:text-[16px] w-full focus:outline-none focus:ring-0 focus:border-[#DD1E24]"
             />
-            <button className="text-palette-black flex items-center gap-1 common-underline underline-offset-2 font-eudoxus text-base hover:opacity-60">
+            <button className="text-palette-black flex items-center gap-1 underline decoration-[1px] underline-offset-2 font-eudoxus text-base hover:opacity-60">
               <img src={checkIcon} alt="checkIcon-icon" />
               Check
             </button>
@@ -181,9 +181,12 @@ const ProductSpecs = () => {
           <p className="sm:font-medium font-bold sm:text-xl text-base font-eudoxus">
             {productsSpecification?.shipping?.title}
           </p>
-          <ul className="custom-bullet sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-palette-gray font-aspekta">
+          <ul className="sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-palette-gray font-aspekta">
             {productsSpecification?.shipping?.details?.map((item, index) => (
-              <li key={index} className="marker:text-palette-gray">
+              <li
+                key={index}
+                className="marker:text-palette-gray list-disc [&::marker]:!text-[0.7rem]"
+              >
                 {item}
               </li>
             ))}
