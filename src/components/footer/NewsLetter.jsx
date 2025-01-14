@@ -5,7 +5,7 @@ const newsLetterContent = {
   title: "Join our Newsletter",
   description:
     "Be the first to know about our latest updates, exclusive offers, and more.",
-  inputHeading: "Enter your email",
+  inputHeading: "Enter email",
   subscribeBtnText: "Subscribe",
 };
 
