@@ -77,7 +77,7 @@ const ProductSpecs = () => {
         </div>
       </div>
       {/* Product Images */}
-      <div className="sm:flex hidden gap-1 pt-10">
+      <div className="sm:flex hidden gap-3 pt-10">
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
@@ -86,7 +86,7 @@ const ProductSpecs = () => {
             <img
               src={img?.image}
               alt={`Product view ${index + 1}`}
-              className="w-20 h-16 object-contain"
+              className="w-full h-16 object-contain"
             />
           </div>
         ))}
