@@ -105,7 +105,7 @@ export const mobileProducts = [
     colors: "4 Colours",
     price: "₹1099",
     customizable: true,
-    groupProds: [prodFour, prodTwo]?.map((gp, i) => ({
+    groupProds: [mobProdThree, cupOne]?.map((gp, i) => ({
       id: i + 1,
       img: gp,
       selected: i === 1 ? true : false,
