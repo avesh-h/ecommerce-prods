@@ -47,9 +47,15 @@
 
 @font-face {
   font-family: "Eudoxus";
-  src: url("../public/fonts/ttf/EudoxusSans-Light.ttf");
+  src: url("../public/fonts/ttf/EudoxusSans-ExtraLight.ttf");
   font-weight: 300;
 }
+
+/* @font-face {
+  font-family: "Eudoxus";
+  src: url("../public/fonts/ttf/EudoxusSans-Light.ttf");
+  font-weight: 300;
+} */
 @font-face {
   font-family: "Eudoxus";
   src: url("../public/fonts/ttf/EudoxusSans-Regular.ttf");
