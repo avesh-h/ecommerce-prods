@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
               src={gp?.img}
               key={`${gp}-${i}`}
               className={`border h-10 w-10 border-solid border-transparent rounded-md hover:border-black cursor-pointer ${
-                gp?.selected ? "border-black" : ""
+                gp?.selected ? "!border-black" : ""
               }`}
               alt="grpImg"
             />
