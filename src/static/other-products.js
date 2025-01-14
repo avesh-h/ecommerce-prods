@@ -17,7 +17,7 @@ export const products = [
     title: "Duro Imperial Vacusteel Flask With Mugs Gift Set, 5 Pieces",
     colors: "4 Colours",
     price: "₹5,795",
-    originalPrice: "₹7,999",
+    originalPrice: "₹1,999",
     discount: "50% off",
     customizable: true,
     groupProds: [prodFour, prodTwo, prodThree, prodFour]?.map((gp, i) => ({
@@ -32,7 +32,7 @@ export const products = [
     title: "Duro Imperial Vacusteel Flask With Mugs Gift Set, 5 Pieces",
     colors: "4 Colours",
     price: "₹5,795",
-    originalPrice: "₹7,999",
+    originalPrice: "₹1,999",
     discount: "50% off",
     customizable: true,
     groupProds: [prodFour, prodTwo, prodThree, prodFour]?.map((gp, i) => ({
@@ -47,7 +47,7 @@ export const products = [
     title: "Duro Imperial Vacusteel Flask With Mugs Gift Set, 5 Pieces",
     colors: "4 Colours",
     price: "₹5,795",
-    originalPrice: "₹7,999",
+    originalPrice: "₹1,999",
     discount: "50% off",
     customizable: true,
     groupProds: [prodFour, prodTwo, prodThree, prodFour]?.map((gp, i) => ({
