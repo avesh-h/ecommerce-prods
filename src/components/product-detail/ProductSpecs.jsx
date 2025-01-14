@@ -181,7 +181,7 @@ const ProductSpecs = () => {
           <p className="sm:font-medium font-bold sm:text-xl text-base font-eudoxus">
             {productsSpecification?.shipping?.title}
           </p>
-          <ul className="sm:pl-7 pl-2 space-y-1 sm:text-base text-sm text-palette-gray font-aspekta">
+          <ul className="sm:pl-7 pl-6 space-y-1 sm:text-base text-sm text-palette-gray font-aspekta">
             {productsSpecification?.shipping?.details?.map((item, index) => (
               <li
                 key={index}
