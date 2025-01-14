@@ -9,7 +9,7 @@ const ProductDetail = () => {
         <div className="w-full">
           <ProductCarousel />
         </div>
-        <div className="px-6 mt-4">
+        <div className="px-6 -mt-2.5">
           <ProductSpecs />
         </div>
       </div>

@@ -16,7 +16,7 @@ const ProductSpecs = () => {
   return (
     <div>
       {/* ratings */}
-      <div className="flex sm:justify-between justify-end text-[#565656]">
+      <div className="flex sm:justify-between justify-end items-center text-[#565656]">
         <p className="sm:flex hidden gap-1 common-underline">
           <img
             src={productsSpecification?.rating?.ratingIcon}
