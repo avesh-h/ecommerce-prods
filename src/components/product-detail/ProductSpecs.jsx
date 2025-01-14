@@ -149,7 +149,7 @@ const ProductSpecs = () => {
         </button>
         <button className="font-eudoxus flex-1 py-2 bg-black border-[#565656] text-white transition-all duration-200 hover:opacity-75 rounded flex justify-center items-center gap-1 text-base">
           <img src={cartIcon} alt="cart-icon" />
-          <span className="underline underline-offset-2">
+          <span className="common-underline underline-offset-0">
             {productsSpecification?.actions?.addToCart?.title}
           </span>
         </button>
