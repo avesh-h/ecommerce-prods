@@ -173,7 +173,7 @@ const Sidebar = ({ open, setOpen }) => {
                 return (
                   <li
                     key={`${link?.id}-${i}`}
-                    className="cursor-pointer py-2 px-3 hover:bg-slate-400/50 rounded-md"
+                    className="cursor-pointer py-2 px-3 hover:bg-slate-400/50 rounded-md font-eudoxus"
                   >
                     {link?.title}
                   </li>
