@@ -28,12 +28,12 @@ const ProductCard = ({ product }) => {
         })}
       </div>
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm flex-1 pt-1">
-        <div className="flex flex-col">
+        <div className="flex flex-col pt-2 sm:pt-4">
           <div>
             <h3 className="sm:text-lg text-base font-aspekta sm:text-palette-black text-palette-gray mb-1 font-normal">
               {product?.title}
             </h3>
-            <div className="flex sm:items-center items-end sm:gap-2 gap-1.5">
+            <div className="flex sm:items-center items-end sm:gap-3 gap-1.5">
               <span className="font-eudoxus font-bold sm:text-lg text-base">
                 {product?.price}
               </span>
@@ -44,7 +44,7 @@ const ProductCard = ({ product }) => {
               ) : null}
 
               {product?.discount ? (
-                <span className="font-aspekta sm:bg-green-100 bg-white font-normal text-[10px] px-0.5 py-0.2 rounded text-nowrap">
+                <span className="font-aspekta sm:text-xs sm:bg-green-100 bg-white font-normal text-[10px] px-0.5 py-0.2 rounded text-nowrap">
                   {product?.discount}
                 </span>
               ) : null}
