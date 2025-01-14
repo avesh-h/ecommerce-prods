@@ -15,9 +15,11 @@ const ProductCard = ({ product }) => {
         {product?.groupProds?.map((gp, i) => {
           return (
             <img
-              src={gp}
+              src={gp?.img}
               key={`${gp}-${i}`}
-              className="border border-solid border-transparent rounded-md hover:border-black cursor-pointer"
+              className={`border h-10 w-10 border-solid border-transparent rounded-md hover:border-black cursor-pointer ${
+                gp?.selected ? "border-black" : ""
+              }`}
               alt="grpImg"
             />
           );
