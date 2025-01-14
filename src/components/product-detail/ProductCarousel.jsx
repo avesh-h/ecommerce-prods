@@ -91,7 +91,7 @@ function ProductCarousel() {
                 <img
                   src={img.image}
                   alt="product thumbnail"
-                  className="w-24 object-cover rounded-lg cursor-pointer"
+                  className="w-[6.37rem] h-full object-cover rounded-lg cursor-pointer"
                 />
               </div>
             </div>
