@@ -97,7 +97,7 @@ const ProductSpecs = () => {
           <button
             key={size?.value}
             onClick={() => setSelectedSize(size?.value)}
-            className={`py-1 text-lg font-eudoxus ${
+            className={`py-1 sm:text-lg text-sm font-eudoxus ${
               selectedSize === size?.value
                 ? "border-b-4 border-red-500 font-bold"
                 : "text-gray-500 font-normal border-b-4 border-transparent"
