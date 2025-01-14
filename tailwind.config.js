@@ -6,6 +6,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", flowbite.content()],
   theme: {
     extend: {
+      scrollBehavior: {
+        auto: "auto",
+        smooth: "smooth",
+      },
       colors: {
         palette: {
           // Add your color variables here
