@@ -2,7 +2,7 @@ import React from "react";
 import emailSvg from "../../assets/svgs/email.svg";
 
 const newsLetterContent = {
-  title: "Join to our newsletter",
+  title: "Join our Newsletter",
   description:
     "Be the first to know about our latest updates, exclusive offers, and more.",
   inputHeading: "Enter your email",
