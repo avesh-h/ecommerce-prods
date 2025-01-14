@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import addCartIcon from "../../assets/add-cart-btn.png";
 
 const ProductCard = ({ product }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="rounded-lg overflow-hidden cursor-pointer">
-      <img src={product?.image} alt="Product 2" className="w-full" />
+      <div
+        className="relative w-full"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <img src={product?.image} alt="Product 2" className="w-full" />
+        <div
+          className={`rounded-lg absolute inset-0 bg-black/30 transition-opacity duration-300 ease-in-out ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
       <div className="sm:flex hidden justify-between items-center text-sm mb-2 font-medium text-palette-gray pt-1">
         <span className="font-eudoxus text-xs">{product?.colors}</span>
         <span className="uppercase text-xs font-eudoxus tracking-[0.075rem]">
