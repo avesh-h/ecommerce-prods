@@ -6,6 +6,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", flowbite.content()],
   theme: {
     extend: {
+      aspectRatio: {
+        "w-435": "435",
+        "h-400": "400",
+      },
       scrollBehavior: {
         auto: "auto",
         smooth: "smooth",

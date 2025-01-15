@@ -22,9 +22,13 @@ const Products = () => {
         You might also like
       </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 sm:pt-8 pt-3">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 sm:pt-8 pt-3 place-items-center">
         {finalProducts?.map((product) => {
-          return <ProductCard key={product?.id} product={product} />;
+          return (
+            // <div key={product.id} className="w-full mx-auto">
+            <ProductCard key={product?.id} product={product} />
+            // </div>
+          );
         })}
       </div>
     </div>

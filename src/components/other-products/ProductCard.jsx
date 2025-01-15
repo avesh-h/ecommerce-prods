@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
       <div className="rounded-lg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-black/30 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300">
         <img src={product?.image} alt="Product 2" className="w-full" />
       </div>
-      <div className="sm:flex hidden justify-between items-center text-sm mb-2 font-medium text-palette-gray pt-1">
+      <div className="sm:flex hidden justify-between items-center text-sm mb-1 font-medium text-palette-gray pt-1">
         <span className="font-eudoxus text-xs">{product?.colors}</span>
         <span className="uppercase text-xs font-eudoxus tracking-[0.075rem]">
           Customisable
