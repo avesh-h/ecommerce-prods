@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
                 {product?.price}
               </span>
               {product?.originalPrice ? (
-                <span className="font-eudoxus line-through text-[10px] sm:text-base text-black-400 font-thin sm:font-normal text-nowrap">
+                <span className="font-aspekta line-through text-[10px] sm:text-base text-black-400 font-[250] sm:font-normal text-nowrap">
                   {`INR ${product?.originalPrice}`}
                 </span>
               ) : null}

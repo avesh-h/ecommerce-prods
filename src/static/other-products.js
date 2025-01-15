@@ -76,7 +76,7 @@ export const mobileProducts = [
     title: "Hampshire 6 Pieces Ceramic Mug",
     colors: "4 Colours",
     price: "₹902",
-    originalPrice: "₹1,999",
+    originalPrice: "1,999",
     discount: "50% off",
     customizable: true,
     groupProds: [prodFour, mobProdOne, mobProdTwo, prodFour]?.map((gp, i) => ({
