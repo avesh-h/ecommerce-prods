@@ -18,7 +18,7 @@ const Main = () => {
         </div>
       </div>
       <div className="mx-auto">
-        <div className="px-6 sm:px-8">
+        <div className="px-6 max-w-screen-2xl sm:px-8 mx-auto">
           <Products />
         </div>
         <Footer />
