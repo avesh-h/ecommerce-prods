@@ -11,8 +11,14 @@
 
 @font-face {
   font-family: Aspekta;
-  src: url("../public/fonts/ttf/Aspekta-100.ttf") format("truetype");
+  src: url("../public/fonts/ttf/Aspekta-200.ttf") format("truetype");
   font-weight: 200;
+}
+
+@font-face {
+  font-family: Aspekta;
+  src: url("../public/fonts/ttf/Aspekta-250.ttf") format("truetype");
+  font-weight: 250;
 }
 
 @font-face {
