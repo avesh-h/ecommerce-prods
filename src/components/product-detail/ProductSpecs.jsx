@@ -39,7 +39,7 @@ const ProductSpecs = () => {
         {productsSpecification?.variants?.map((img, index) => (
           <div
             key={index}
-            className="rounded-lg cursor-pointer border-solid border border-transparent hover:border-black"
+            className="rounded-lg cursor-pointer border-solid border-2 border-transparent hover:border-black"
           >
             <img
               src={img?.image}
