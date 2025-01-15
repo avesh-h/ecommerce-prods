@@ -8,7 +8,7 @@ import ProductDetail from "./product-detail/ProductDetail";
 const Main = () => {
   return (
     <div className="w-full">
-      <div className="w-full max-w-screen-2xl mx-auto">
+      <div className="w-full mx-auto">
         <Navbar />
         <div className="max-w-[1250px] mx-auto" id="product-detail">
           <ProductDetail />
@@ -17,7 +17,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="mx-auto">
         <div className="px-6 sm:px-8">
           <Products />
         </div>
