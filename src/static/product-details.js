@@ -33,7 +33,7 @@ export const productsSpecification = {
   },
   pricing: {
     currentPrice: "₹902",
-    originalPrice: "INR 1999",
+    originalPrice: "INR 1,999",
     discount: "50% off",
   },
   variants: [
