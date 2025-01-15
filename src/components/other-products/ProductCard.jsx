@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
           Customisable
         </span>
       </div>
-      <div className="flex gap-1 w-full pt-1 sm:pt-0">
+      <div className="flex gap-1 w-full pt-2 sm:pt-0">
         {product?.groupProds?.map((gp, i) => {
           return (
             <img
