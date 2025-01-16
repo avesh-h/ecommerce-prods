@@ -1,9 +1,9 @@
 import React from "react";
-import Products from "./other-products/Products";
-import Tab from "./prod-sepcs/Tab";
-import Footer from "./footer/Footer";
-import { Navbar } from "./header/main";
-import ProductDetail from "./product-detail/ProductDetail";
+import Products from "../components/other-products/Products";
+import Tab from "../components/prod-sepcs/Tab";
+import Footer from "../components/footer/Footer";
+import { Navbar } from "../components/header/main";
+import ProductDetail from "../components/product-detail/ProductDetail";
 
 const Main = () => {
   return (
