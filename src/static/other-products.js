@@ -6,9 +6,6 @@ import cupOne from "../assets/cup-1.png";
 import cupTwo from "../assets/cup-2.png";
 import cupThree from "../assets/cup-3.png";
 import cupFour from "../assets/cup-4.png";
-import mobProdOne from "../assets/m-prod-1(2).png";
-import mobProdTwo from "../assets/m-prod-1(3).png";
-import mobProdThree from "../assets/m-prod-2(1).png";
 
 export const products = [
   {
@@ -79,11 +76,11 @@ export const mobileProducts = [
     originalPrice: "1,999",
     discount: "50% off",
     customizable: true,
-    groupProds: [prodFour, mobProdOne, mobProdTwo, prodFour]?.map((gp, i) => ({
+    groupProds: [cupThree, cupTwo, cupFour, cupOne]?.map((gp, i) => ({
       id: i + 1,
       img: gp,
-      selected: i === 0 ? true : false,
     })),
+    moreImages: true,
   },
   {
     id: 2,
@@ -92,10 +89,9 @@ export const mobileProducts = [
     colors: "4 Colours",
     price: "₹9202",
     customizable: true,
-    groupProds: [mobProdThree, cupOne]?.map((gp, i) => ({
+    groupProds: [cupThree, cupOne]?.map((gp, i) => ({
       id: i + 1,
       img: gp,
-      selected: i === 1 ? true : false,
     })),
   },
   {
@@ -105,10 +101,9 @@ export const mobileProducts = [
     colors: "4 Colours",
     price: "₹1099",
     customizable: true,
-    groupProds: [mobProdThree, cupOne]?.map((gp, i) => ({
+    groupProds: [cupFour, cupOne]?.map((gp, i) => ({
       id: i + 1,
       img: gp,
-      selected: i === 1 ? true : false,
     })),
   },
   {
@@ -118,10 +113,9 @@ export const mobileProducts = [
     colors: "4 Colours",
     price: "₹1499",
     customizable: true,
-    groupProds: [mobProdThree, cupTwo]?.map((gp, i) => ({
+    groupProds: [cupOne, cupTwo]?.map((gp, i) => ({
       id: i + 1,
       img: gp,
-      selected: i === 1 ? true : false,
     })),
   },
 ];
